@@ -1,0 +1,200 @@
+Blizzard BNUpdate v2.32 compiled on Jan 23 2002
+Log created at  8:10 pm on 07/23/2005
+
+This patch upgrades Brood War from version 1.04 to version 1.09.
+
+Is G:\PCGames\Starcraft\local.dll still open? no
+Is G:\PCGames\Starcraft\smackw32.dll still open? no
+Is G:\PCGames\Starcraft\storm.dll still open? no
+Is G:\PCGames\Starcraft\vct32150.dll still open? no
+Is G:\PCGames\Starcraft\starcraft.exe still open? no
+Is G:\PCGames\Starcraft\staredit.exe still open? no
+Is G:\PCGames\Starcraft\staredit.cnt still open? no
+Is G:\PCGames\Starcraft\staredit.hlp still open? no
+Is G:\PCGames\Starcraft\editlocal.dll still open? no
+Is G:\PCGames\Starcraft\battle.snp still open? no
+Is G:\PCGames\Starcraft\standard.snp still open? no
+Is G:\PCGames\Starcraft\readme.txt still open? no
+Is G:\PCGames\Starcraft\report bugs.url still open? no
+Is G:\PCGames\Starcraft\SCUpdate.cnt still open? no
+Is G:\PCGames\Starcraft\SCUpdate.hlp still open? no
+Is G:\PCGames\Starcraft\msv2all.vxp still open? no
+Is G:\PCGames\Starcraft\mvoice.vxp still open? no
+Is G:\PCGames\Starcraft\vadagc.vxp still open? no
+Is G:\PCGames\Starcraft\vfonts.vxp still open? no
+Is G:\PCGames\Starcraft\SEditDEU.loc still open? no
+Is G:\PCGames\Starcraft\SEditENU.loc still open? no
+Is G:\PCGames\Starcraft\SEditESP.loc still open? no
+Is G:\PCGames\Starcraft\SEditFRA.loc still open? no
+Is G:\PCGames\Starcraft\SEditITA.loc still open? no
+Is G:\PCGames\Starcraft\SEditPTB.loc still open? no
+Is G:\PCGames\Starcraft\maps\(2)Challenger.scm still open? no
+Is G:\PCGames\Starcraft\maps\(2)River Crossing.scm still open? no
+Is G:\PCGames\Starcraft\maps\(2)Road War.scm still open? no
+Is G:\PCGames\Starcraft\maps\(2)Space Madness.scm still open? no
+Is G:\PCGames\Starcraft\maps\(2)The Small Divide.scm still open? no
+Is G:\PCGames\Starcraft\maps\(2)Volcanis.scm still open? no
+Is G:\PCGames\Starcraft\maps\(3)Holy Ground.scm still open? no
+Is G:\PCGames\Starcraft\maps\(3)Meltdown.scm still open? no
+Is G:\PCGames\Starcraft\maps\(3)Three Kingdoms.scm still open? no
+Is G:\PCGames\Starcraft\maps\(3)Triumvirate.scm still open? no
+Is G:\PCGames\Starcraft\maps\(4)Alpha Draconis.scm still open? no
+Is G:\PCGames\Starcraft\maps\(4)Blood Bath.scm still open? no
+Is G:\PCGames\Starcraft\maps\(4)Bridge Too Near.scm still open? no
+Is G:\PCGames\Starcraft\maps\(4)Cyclone.scm still open? no
+Is G:\PCGames\Starcraft\maps\(4)Dark Crystal.scm still open? no
+Is G:\PCGames\Starcraft\maps\(4)Dark Star.scm still open? no
+Is G:\PCGames\Starcraft\maps\(4)Lost Civilization.scm still open? no
+Is G:\PCGames\Starcraft\maps\(4)Opposing City States '98.scm still open? no
+Is G:\PCGames\Starcraft\maps\(4)Orbital Relay.scm still open? no
+Is G:\PCGames\Starcraft\maps\(4)Power Lines.scm still open? no
+Is G:\PCGames\Starcraft\maps\(4)Ruins of the Ancients.scm still open? no
+Is G:\PCGames\Starcraft\maps\(4)Tarsonis Orbital.scm still open? no
+Is G:\PCGames\Starcraft\maps\(5)Diablo.scm still open? no
+Is G:\PCGames\Starcraft\maps\(5)Island Hop.scm still open? no
+Is G:\PCGames\Starcraft\maps\(5)Jeweled River.scm still open? no
+Is G:\PCGames\Starcraft\maps\(5)Sherwood Forest.scm still open? no
+Is G:\PCGames\Starcraft\maps\(6)Ground Zero.scm still open? no
+Is G:\PCGames\Starcraft\maps\(6)Hidden Shrine.scm still open? no
+Is G:\PCGames\Starcraft\maps\(6)New Gettysburg.scm still open? no
+Is G:\PCGames\Starcraft\maps\(7)Continental Divide.scm still open? no
+Is G:\PCGames\Starcraft\maps\(7)River War.scm still open? no
+Is G:\PCGames\Starcraft\maps\(8)Bridge to Bridge '98.scm still open? no
+Is G:\PCGames\Starcraft\maps\(8)Char Magma.scm still open? no
+Is G:\PCGames\Starcraft\maps\(8)Homeworld.scm still open? no
+Is G:\PCGames\Starcraft\maps\(8)Killing Fields.scm still open? no
+Is G:\PCGames\Starcraft\maps\(8)Orbital Death.scm still open? no
+Is G:\PCGames\Starcraft\maps\(8)Plains of Snow '98.scm still open? no
+Is G:\PCGames\Starcraft\maps\(8)Station Unrest.scm still open? no
+Is G:\PCGames\Starcraft\maps\(8)The Hunters.scm still open? no
+Is G:\PCGames\Starcraft\maps\Campaign\(1)Enslavers01.scm still open? no
+Is G:\PCGames\Starcraft\maps\Campaign\(1)Enslavers02a.scm still open? no
+Is G:\PCGames\Starcraft\maps\Campaign\(1)Enslavers02b.scm still open? no
+Is G:\PCGames\Starcraft\maps\Campaign\(1)Enslavers03a.scm still open? no
+Is G:\PCGames\Starcraft\maps\Campaign\(1)Enslavers03b.scm still open? no
+Is G:\PCGames\Starcraft\maps\Ladder\(4)Ashrigo.scm still open? no
+Is G:\PCGames\Starcraft\maps\Ladder\(4)Dire Straits.scm still open? no
+Is G:\PCGames\Starcraft\maps\Ladder\(4)Lost Temple.scm still open? no
+Is G:\PCGames\Starcraft\maps\Ladder\(4)Proving Grounds.scm still open? no
+Is G:\PCGames\Starcraft\maps\Ladder\(4)Rivalry.scm still open? no
+Is G:\PCGames\Starcraft\maps\Ladder\(6)Acropolis.scm still open? no
+Is G:\PCGames\Starcraft\maps\Ladder\(6)Polaris Prime.scm still open? no
+Is G:\PCGames\Starcraft\maps\OldLadder\(2)Discovery.scm still open? no
+Is G:\PCGames\Starcraft\maps\OldLadder\(2)Gauntlet.scm still open? no
+Is G:\PCGames\Starcraft\maps\OldLadder\(2)River Styx.scm still open? no
+Is G:\PCGames\Starcraft\maps\OldLadder\(2)Solar Station.scm still open? no
+Is G:\PCGames\Starcraft\maps\OldLadder\(4)Bone Canyon.scm still open? no
+Is G:\PCGames\Starcraft\maps\OldLadder\(4)Crusader.scm still open? no
+Is G:\PCGames\Starcraft\maps\OldLadder\(4)Remote Outpost.scm still open? no
+Is G:\PCGames\Starcraft\maps\OldLadder\(8)Green Valleys.scm still open? no
+Is G:\PCGames\Starcraft\maps\OldLadder\(4)Rivalry.scm still open? no
+Is G:\PCGames\Starcraft\maps\Scenario\(2)Pro Bowl.scm still open? no
+Is G:\PCGames\Starcraft\maps\Scenario\(2)Wakka Wakka.scm still open? no
+Is G:\PCGames\Starcraft\maps\Scenario\(3)Defenders of the Galaxy.scm still open? no
+Is G:\PCGames\Starcraft\maps\Scenario\(4)King of the Hill.scm still open? no
+Is G:\PCGames\Starcraft\maps\Scenario\(4)Old Faithful.scm still open? no
+Is G:\PCGames\Starcraft\maps\Scenario\(4)Steal the Bacon.scm still open? no
+Is G:\PCGames\Starcraft\maps\Scenario\(4)Zergling Round-Up.scm still open? no
+Is G:\PCGames\Starcraft\maps\Scenario\(4)Zoo Keeper.scm still open? no
+Is G:\PCGames\Starcraft\maps\Scenario\(5)Race of Death.scm still open? no
+Is G:\PCGames\Starcraft\maps\Scenario\(8)StarCraft Fortress.scm still open? no
+Is G:\PCGames\Starcraft\local.dll still open? no
+Is G:\PCGames\Starcraft\smackw32.dll still open? no
+Is G:\PCGames\Starcraft\storm.dll still open? no
+Is G:\PCGames\Starcraft\vct32150.dll still open? no
+Is G:\PCGames\Starcraft\starcraft.exe still open? no
+Is G:\PCGames\Starcraft\staredit.exe still open? no
+Is G:\PCGames\Starcraft\staredit.cnt still open? no
+Is G:\PCGames\Starcraft\staredit.hlp still open? no
+Is G:\PCGames\Starcraft\editlocal.dll still open? no
+Is G:\PCGames\Starcraft\battle.snp still open? no
+Is G:\PCGames\Starcraft\standard.snp still open? no
+Is G:\PCGames\Starcraft\readme.txt still open? no
+Is G:\PCGames\Starcraft\report bugs.url still open? no
+Is G:\PCGames\Starcraft\SCUpdate.cnt still open? no
+Is G:\PCGames\Starcraft\SCUpdate.hlp still open? no
+Is G:\PCGames\Starcraft\msv2all.vxp still open? no
+Is G:\PCGames\Starcraft\mvoice.vxp still open? no
+Is G:\PCGames\Starcraft\vadagc.vxp still open? no
+Is G:\PCGames\Starcraft\vfonts.vxp still open? no
+Is G:\PCGames\Starcraft\SEditDEU.loc still open? no
+Is G:\PCGames\Starcraft\SEditENU.loc still open? no
+Is G:\PCGames\Starcraft\SEditESP.loc still open? no
+Is G:\PCGames\Starcraft\SEditFRA.loc still open? no
+Is G:\PCGames\Starcraft\SEditITA.loc still open? no
+Is G:\PCGames\Starcraft\SEditPTB.loc still open? no
+Is G:\PCGames\Starcraft\maps\(2)Challenger.scm still open? no
+Is G:\PCGames\Starcraft\maps\(2)River Crossing.scm still open? no
+Is G:\PCGames\Starcraft\maps\(2)Road War.scm still open? no
+Is G:\PCGames\Starcraft\maps\(2)Space Madness.scm still open? no
+Is G:\PCGames\Starcraft\maps\(2)The Small Divide.scm still open? no
+Is G:\PCGames\Starcraft\maps\(2)Volcanis.scm still open? no
+Is G:\PCGames\Starcraft\maps\(3)Holy Ground.scm still open? no
+Is G:\PCGames\Starcraft\maps\(3)Meltdown.scm still open? no
+Is G:\PCGames\Starcraft\maps\(3)Three Kingdoms.scm still open? no
+Is G:\PCGames\Starcraft\maps\(3)Triumvirate.scm still open? no
+Is G:\PCGames\Starcraft\maps\(4)Alpha Draconis.scm still open? no
+Is G:\PCGames\Starcraft\maps\(4)Blood Bath.scm still open? no
+Is G:\PCGames\Starcraft\maps\(4)Bridge Too Near.scm still open? no
+Is G:\PCGames\Starcraft\maps\(4)Cyclone.scm still open? no
+Is G:\PCGames\Starcraft\maps\(4)Dark Crystal.scm still open? no
+Is G:\PCGames\Starcraft\maps\(4)Dark Star.scm still open? no
+Is G:\PCGames\Starcraft\maps\(4)Lost Civilization.scm still open? no
+Is G:\PCGames\Starcraft\maps\(4)Opposing City States '98.scm still open? no
+Is G:\PCGames\Starcraft\maps\(4)Orbital Relay.scm still open? no
+Is G:\PCGames\Starcraft\maps\(4)Power Lines.scm still open? no
+Is G:\PCGames\Starcraft\maps\(4)Ruins of the Ancients.scm still open? no
+Is G:\PCGames\Starcraft\maps\(4)Tarsonis Orbital.scm still open? no
+Is G:\PCGames\Starcraft\maps\(5)Diablo.scm still open? no
+Is G:\PCGames\Starcraft\maps\(5)Island Hop.scm still open? no
+Is G:\PCGames\Starcraft\maps\(5)Jeweled River.scm still open? no
+Is G:\PCGames\Starcraft\maps\(5)Sherwood Forest.scm still open? no
+Is G:\PCGames\Starcraft\maps\(6)Ground Zero.scm still open? no
+Is G:\PCGames\Starcraft\maps\(6)Hidden Shrine.scm still open? no
+Is G:\PCGames\Starcraft\maps\(6)New Gettysburg.scm still open? no
+Is G:\PCGames\Starcraft\maps\(7)Continental Divide.scm still open? no
+Is G:\PCGames\Starcraft\maps\(7)River War.scm still open? no
+Is G:\PCGames\Starcraft\maps\(8)Bridge to Bridge '98.scm still open? no
+Is G:\PCGames\Starcraft\maps\(8)Char Magma.scm still open? no
+Is G:\PCGames\Starcraft\maps\(8)Homeworld.scm still open? no
+Is G:\PCGames\Starcraft\maps\(8)Killing Fields.scm still open? no
+Is G:\PCGames\Starcraft\maps\(8)Orbital Death.scm still open? no
+Is G:\PCGames\Starcraft\maps\(8)Plains of Snow '98.scm still open? no
+Is G:\PCGames\Starcraft\maps\(8)Station Unrest.scm still open? no
+Is G:\PCGames\Starcraft\maps\(8)The Hunters.scm still open? no
+Is G:\PCGames\Starcraft\maps\Campaign\(1)Enslavers01.scm still open? no
+Is G:\PCGames\Starcraft\maps\Campaign\(1)Enslavers02a.scm still open? no
+Is G:\PCGames\Starcraft\maps\Campaign\(1)Enslavers02b.scm still open? no
+Is G:\PCGames\Starcraft\maps\Campaign\(1)Enslavers03a.scm still open? no
+Is G:\PCGames\Starcraft\maps\Campaign\(1)Enslavers03b.scm still open? no
+Is G:\PCGames\Starcraft\maps\Ladder\(4)Ashrigo.scm still open? no
+Is G:\PCGames\Starcraft\maps\Ladder\(4)Dire Straits.scm still open? no
+Is G:\PCGames\Starcraft\maps\Ladder\(4)Lost Temple.scm still open? no
+Is G:\PCGames\Starcraft\maps\Ladder\(4)Proving Grounds.scm still open? no
+Is G:\PCGames\Starcraft\maps\Ladder\(4)Rivalry.scm still open? no
+Is G:\PCGames\Starcraft\maps\Ladder\(6)Acropolis.scm still open? no
+Is G:\PCGames\Starcraft\maps\Ladder\(6)Polaris Prime.scm still open? no
+Is G:\PCGames\Starcraft\maps\OldLadder\(2)Discovery.scm still open? no
+Is G:\PCGames\Starcraft\maps\OldLadder\(2)Gauntlet.scm still open? no
+Is G:\PCGames\Starcraft\maps\OldLadder\(2)River Styx.scm still open? no
+Is G:\PCGames\Starcraft\maps\OldLadder\(2)Solar Station.scm still open? no
+Is G:\PCGames\Starcraft\maps\OldLadder\(4)Bone Canyon.scm still open? no
+Is G:\PCGames\Starcraft\maps\OldLadder\(4)Crusader.scm still open? no
+Is G:\PCGames\Starcraft\maps\OldLadder\(4)Remote Outpost.scm still open? no
+Is G:\PCGames\Starcraft\maps\OldLadder\(8)Green Valleys.scm still open? no
+Is G:\PCGames\Starcraft\maps\OldLadder\(4)Rivalry.scm still open? no
+Is G:\PCGames\Starcraft\maps\Scenario\(2)Pro Bowl.scm still open? no
+Is G:\PCGames\Starcraft\maps\Scenario\(2)Wakka Wakka.scm still open? no
+Is G:\PCGames\Starcraft\maps\Scenario\(3)Defenders of the Galaxy.scm still open? no
+Is G:\PCGames\Starcraft\maps\Scenario\(4)King of the Hill.scm still open? no
+Is G:\PCGames\Starcraft\maps\Scenario\(4)Old Faithful.scm still open? no
+Is G:\PCGames\Starcraft\maps\Scenario\(4)Steal the Bacon.scm still open? no
+Is G:\PCGames\Starcraft\maps\Scenario\(4)Zergling Round-Up.scm still open? no
+Is G:\PCGames\Starcraft\maps\Scenario\(4)Zoo Keeper.scm still open? no
+Is G:\PCGames\Starcraft\maps\Scenario\(5)Race of Death.scm still open? no
+Is G:\PCGames\Starcraft\maps\Scenario\(8)StarCraft Fortress.scm still open? no
+WARNING: couldn't delete registry key
+系统找不到指定的文件。
+
+RESULT: Patch succeeded with warnings noted above
+
