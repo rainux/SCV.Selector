@@ -323,7 +323,7 @@ FunctionEnd
 
 Function RegFix
   WriteRegStr HKLM "SOFTWARE\Blizzard Entertainment\Starcraft" "InstallPath" "$INSTDIR\"
-  WriteRegStr HKLM "SOFTWARE\Blizzard Entertainment\Starcraft" "Program" "$INSTDIR\Starcraft.exe"
+  WriteRegStr HKLM "SOFTWARE\Blizzard Entertainment\Starcraft" "Program" "$INSTDIR\StarCraft.exe"
   WriteRegStr HKLM "SOFTWARE\Blizzard Entertainment\Starcraft" "StarEdit" "$INSTDIR\"
   ${If} $NoCD = 1
     WriteRegStr HKLM "SOFTWARE\Blizzard Entertainment\Starcraft" "StarCD" "$INSTDIR\"
