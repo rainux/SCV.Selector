@@ -9,7 +9,8 @@
   !define PRODUCT_NAME "SCV Selector (Full Version)"
   !define SCV_INI "SCV.ini"
 !endif
-!define PRODUCT_VERSION "Build 2008.07.18"
+!define RELEASE_DATE "2008.07.18"
+!define PRODUCT_VERSION "Build ${RELEASE_DATE}"
 !define PRODUCT_PUBLISHER "Rainux"
 !define PRODUCT_WEB_SITE "http://www.rainux.org"
 
@@ -34,9 +35,9 @@ Page custom ShowVerSelect LeaveVerSelect
 
 Name "${PRODUCT_NAME} ${PRODUCT_VERSION}"
 !ifndef MINI_VERSION
-  OutFile "SCV.Selector.Full.exe"
+  OutFile "SCV.Selector.Full.${RELEASE_DATE}.exe"
 !else
-  OutFile "SCV.Selector.Mini.exe"
+  OutFile "SCV.Selector.Mini.${RELEASE_DATE}.exe"
 !endif
 !ifndef DEBUG
   InstallDirRegKey HKLM "SOFTWARE\Blizzard Entertainment\Starcraft" "InstallPath"
