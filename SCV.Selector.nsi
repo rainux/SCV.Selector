@@ -97,6 +97,14 @@ Section "SCVS"
   ; Try from the highest version, this makes script more effective
   !ifndef MINI_VERSION
   DetailPrint "Installing $R1"
+  StrCmp $R1 "Brood War v1.16.0" 0 +4
+    Call BW1160
+    IntOp $Started 1 +
+    Goto +2
+  StrCmp $R1 "Brood War v1.15.3" 0 +4
+    Call BW1153
+    IntOp $Started 1 +
+    Goto +2
   StrCmp $R1 "Brood War v1.15.2" 0 +4
     Call BW1152
     IntOp $Started 1 +
@@ -213,8 +221,8 @@ Section "SCVS"
 
   !ifdef MINI_VERSION
   DetailPrint "Installing $R1"
-  StrCmp $R1 "Brood War v1.15.2" 0 +4
-    Call BW1152
+  StrCmp $R1 "Brood War v1.16.0" 0 +4
+    Call BW1160
     IntOp $Started 1 +
     Goto +2
   StrCmp $R1 "Brood War v1.14" 0 +4
@@ -508,9 +516,18 @@ FunctionEnd
 Function BW1152
   File "versions\BW.v1.15.2\*.*"
 FunctionEnd
+
+Function BW1153
+  File "versions\BW.v1.15.3\*.*"
+FunctionEnd
+
+Function BW1160
+  File "versions\BW.v1.16.0\*.*"
+FunctionEnd
 !endif
 
 !ifdef MINI_VERSION
+# 对于 Mini 版本，跳过版本可能因为新版本中某文件没有修改而导致丢失必要的文件，必须反复检查
 Function BW108b
   File "versions\SC.v1.00\Local.dll"
   File "versions\SC.v1.00\Smackw32.dll"
@@ -539,12 +556,12 @@ Function BW114
   File "versions\BW.v1.14\storm.dll"
 FunctionEnd
 
-Function BW1152
-  File "versions\BW.v1.15.2\battle.snp"
-  File "versions\BW.v1.15.2\patch.txt"
-  File "versions\BW.v1.15.2\Patch_rt.mpq"
-  File "versions\BW.v1.15.2\standard.snp"
-  File "versions\BW.v1.15.2\StarCraft.exe"
-  File "versions\BW.v1.15.2\storm.dll"
+Function BW1160
+  File "versions\BW.v1.15.3\Patch_rt.mpq"
+  File "versions\BW.v1.16.0\battle.snp"
+  File "versions\BW.v1.16.0\patch.txt"
+  File "versions\BW.v1.16.0\standard.snp"
+  File "versions\BW.v1.16.0\StarCraft.exe"
+  File "versions\BW.v1.16.0\storm.dll"
 FunctionEnd
 !endif
