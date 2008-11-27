@@ -298,10 +298,19 @@ FunctionEnd
 
 Function NoCDPatch
   ${If} $NoCD = 1
-    ${If} $R1 == "Brood War v1.15.2"
-      File /oname=BroodWar.mpq "data\storm.NoCD\Install.exe"
+    ${If} $R1 S>= "Brood War v1.15.2"
+      # 当 BroodWar.mpq 不存在时，优先使用用户已有的 Install.exe
+      IfFileExists "$INSTDIR\BroodWar.mpq" +4 0
+        IfFileExists "$INSTDIR\Install.exe" 0 +2
+          Rename "$INSTDIR\Install.exe" "$INSTDIR\BroodWar.mpq"
+        File /oname=BroodWar.mpq "data\storm.NoCD\Install.exe"
     ${Else}
-      File "data\storm.NoCD\Install.exe"
+      # 当 Install.exe 不存在时，优先使用用户已有的 BroodWar.mpq
+      IfFileExists "$INSTDIR\Install.exe" +4 0
+        IfFileExists "$INSTDIR\BroodWar.mpq" 0 +2
+          Rename "$INSTDIR\BroodWar.mpq" "$INSTDIR\Install.exe"
+        File "data\storm.NoCD\Install.exe"
+
       File "data\storm.NoCD\NoCD.pat"
       DetailPrint "VPatching storm.dll to NoCD version"
       VPatch::vpatchfile "NoCD.pat" "storm.dll" "storm.NoCD.dll"
