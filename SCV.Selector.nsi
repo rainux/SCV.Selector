@@ -9,7 +9,7 @@
   !define PRODUCT_NAME "SCV Selector (Full Version)"
   !define SCV_INI "SCV.ini"
 !endif
-!define RELEASE_DATE "2008.11.28"
+!define RELEASE_DATE "2008.12.03"
 !define PRODUCT_VERSION "Build ${RELEASE_DATE}"
 !define PRODUCT_PUBLISHER "Rainux"
 !define PRODUCT_WEB_SITE "http://www.rainux.org"
