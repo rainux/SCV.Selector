@@ -88,15 +88,6 @@ Section "SCVS"
 
   System::Call "winmm::timeGetTime() i .R8 ?r"
 
-  ; If "Other" selected, use DropList
-  !insertmacro MUI_INSTALLOPTIONS_READ $R0 ${SCV_INI} "Field 21" "State"
-  ${If} $R0 = 1
-    !insertmacro MUI_INSTALLOPTIONS_READ $Version ${SCV_INI} "Field 22" "State"
-  ${Else}
-    ; $R9 is the selected radio ID
-    !insertmacro MUI_INSTALLOPTIONS_READ $Version ${SCV_INI} "Field $R9" "Text"
-  ${EndIf}
-
   ; Try from the highest version, this makes script more effective
   !ifndef MINI_VERSION
   DetailPrint "Installing $Version"
@@ -269,6 +260,16 @@ FunctionEnd
 LangString TEXT_IO_TITLE ${LANG_ENGLISH} "StarCraft Version Select"
 LangString TEXT_IO_SUBTITLE ${LANG_ENGLISH} "Please select the version of StarCraft you want to use."
 
+Function UpdateBWIcon
+  ${If} $Version S>= "Brood War v1.14"
+    ShowWindow $R3 ${SW_HIDE}
+    ShowWindow $R4 ${SW_SHOW}
+  ${Else}
+    ShowWindow $R3 ${SW_SHOW}
+    ShowWindow $R4 ${SW_HIDE}
+  ${EndIf}
+FunctionEnd
+
 Function ShowVerSelect
   !insertmacro MUI_HEADER_TEXT "$(TEXT_IO_TITLE)" "$(TEXT_IO_SUBTITLE)"
   Push $R0
@@ -276,8 +277,8 @@ Function ShowVerSelect
   ; $R3 is handle of BW icon, $R4 is handle of BW.1.14 icon
   !insertmacro MUI_INSTALLOPTIONS_READ $R3 ${SCV_INI} "Field 2" "HWND"
   !insertmacro MUI_INSTALLOPTIONS_READ $R4 ${SCV_INI} "Field 25" "HWND"
-  ShowWindow $R3 ${SW_HIDE}
-  ShowWindow $R4 ${SW_SHOW}
+  !insertmacro MUI_INSTALLOPTIONS_READ $Version ${SCV_INI} "Field 22" "State"
+  Call UpdateBWIcon
   InstallOptionsEx::show
   Pop $R0
 FunctionEnd
@@ -286,31 +287,17 @@ Function LeaveVerSelect
   ; $R0 is the button ID, $R1 is the DropList
   !insertmacro MUI_INSTALLOPTIONS_READ $R0 ${SCV_INI} "Settings" "State"
   !insertmacro MUI_INSTALLOPTIONS_READ $R1 ${SCV_INI} "Field 22" "HWND"
-  ; 如果添加新版本，需要修改此数字 ID
   ${If} $R0 >= 7
   ${AndIf} $R0 <= 20
     EnableWindow $R1 0
-    ; $R9 is the selected radio ID
-    IntOp $R9 $R0 +
-    ${If} $R0 = 20
-      ShowWindow $R3 ${SW_HIDE}
-      ShowWindow $R4 ${SW_SHOW}
-    ${Else}
-      ShowWindow $R3 ${SW_SHOW}
-      ShowWindow $R4 ${SW_HIDE}
-    ${EndIf}
+    !insertmacro MUI_INSTALLOPTIONS_READ $Version ${SCV_INI} "Field $R0" "Text"
+    Call UpdateBWIcon
     Abort
   ${ElseIf} $R0 = 21
   ${OrIf} $R0 = 22
     EnableWindow $R1 1
-    !insertmacro MUI_INSTALLOPTIONS_READ $R5 ${SCV_INI} "Field 22" "State"
-    ${If} $R5 S>= "Brood War v1.14"
-      ShowWindow $R3 ${SW_HIDE}
-      ShowWindow $R4 ${SW_SHOW}
-    ${Else}
-      ShowWindow $R3 ${SW_SHOW}
-      ShowWindow $R4 ${SW_HIDE}
-    ${EndIf}
+    !insertmacro MUI_INSTALLOPTIONS_READ $Version ${SCV_INI} "Field 22" "State"
+    Call UpdateBWIcon
     Abort
   ${EndIf}
 FunctionEnd
