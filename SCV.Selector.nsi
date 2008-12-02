@@ -18,7 +18,7 @@
 !include "MUI.nsh"
 
 ; MUI Settings
-!define MUI_ICON "data\BW.ico"
+!define MUI_ICON "data\BW.1.14.ico"
 
 ; °æ±¾Ñ¡ÔñÒ³Ãæ
 Page custom ShowVerSelect LeaveVerSelect
@@ -60,6 +60,7 @@ BrandingText "${PRODUCT_NAME} ${PRODUCT_VERSION}"
 
   ReserveFile ${SCV_INI}
   ReserveFile "data\SC.ico"
+  ReserveFile "data\BW.ico"
   ReserveFile "${NSISDIR}\Plugins\InstallOptionsEx.dll"
 
 ;--------------------------------
@@ -259,7 +260,9 @@ SectionEnd
 Function .onInit
   !insertmacro MUI_INSTALLOPTIONS_EXTRACT ${SCV_INI}
   !insertmacro MUI_INSTALLOPTIONS_EXTRACT_AS "data\SC.ico" "SC.ico"
+  !insertmacro MUI_INSTALLOPTIONS_EXTRACT_AS "data\BW.ico" "BW.ico"
   !insertmacro MUI_INSTALLOPTIONS_WRITE ${SCV_INI} "Field 1" "Text" "$PLUGINSDIR\SC.ico"
+  !insertmacro MUI_INSTALLOPTIONS_WRITE ${SCV_INI} "Field 2" "Text" "$PLUGINSDIR\BW.ico"
 FunctionEnd
 
 LangString TEXT_IO_TITLE ${LANG_ENGLISH} "StarCraft Version Select"
@@ -268,7 +271,13 @@ LangString TEXT_IO_SUBTITLE ${LANG_ENGLISH} "Please select the version of StarCr
 Function ShowVerSelect
   !insertmacro MUI_HEADER_TEXT "$(TEXT_IO_TITLE)" "$(TEXT_IO_SUBTITLE)"
   Push $R0
-  InstallOptionsEx::dialog $PLUGINSDIR\${SCV_INI}
+  InstallOptionsEx::initDialog /NOUNLOAD $PLUGINSDIR\${SCV_INI}
+  ; $R3 is handle of BW icon, $R4 is handle of BW.1.14 icon
+  !insertmacro MUI_INSTALLOPTIONS_READ $R3 ${SCV_INI} "Field 2" "HWND"
+  !insertmacro MUI_INSTALLOPTIONS_READ $R4 ${SCV_INI} "Field 25" "HWND"
+  ShowWindow $R3 ${SW_HIDE}
+  ShowWindow $R4 ${SW_SHOW}
+  InstallOptionsEx::show
   Pop $R0
 FunctionEnd
 
@@ -282,9 +291,25 @@ Function LeaveVerSelect
     EnableWindow $R1 0
     ; $R9 is the selected radio ID
     IntOp $R9 $R0 +
+    ${If} $R0 = 20
+      ShowWindow $R3 ${SW_HIDE}
+      ShowWindow $R4 ${SW_SHOW}
+    ${Else}
+      ShowWindow $R3 ${SW_SHOW}
+      ShowWindow $R4 ${SW_HIDE}
+    ${EndIf}
     Abort
   ${ElseIf} $R0 = 21
+  ${OrIf} $R0 = 22
     EnableWindow $R1 1
+    !insertmacro MUI_INSTALLOPTIONS_READ $R5 ${SCV_INI} "Field 22" "State"
+    ${If} $R5 S>= "Brood War v1.14"
+      ShowWindow $R3 ${SW_HIDE}
+      ShowWindow $R4 ${SW_SHOW}
+    ${Else}
+      ShowWindow $R3 ${SW_SHOW}
+      ShowWindow $R4 ${SW_HIDE}
+    ${EndIf}
     Abort
   ${EndIf}
 FunctionEnd
