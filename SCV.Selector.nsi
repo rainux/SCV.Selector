@@ -68,6 +68,7 @@ BrandingText "${PRODUCT_NAME} ${PRODUCT_VERSION}"
 
   Var NoCD
   Var Started
+  Var Version
 
 ;--------------------------------
 ;Installer Sections
@@ -90,152 +91,152 @@ Section "SCVS"
   ; If "Other" selected, use DropList
   !insertmacro MUI_INSTALLOPTIONS_READ $R0 ${SCV_INI} "Field 21" "State"
   ${If} $R0 = 1
-    !insertmacro MUI_INSTALLOPTIONS_READ $R1 ${SCV_INI} "Field 22" "State"
+    !insertmacro MUI_INSTALLOPTIONS_READ $Version ${SCV_INI} "Field 22" "State"
   ${Else}
     ; $R9 is the selected radio ID
-    !insertmacro MUI_INSTALLOPTIONS_READ $R1 ${SCV_INI} "Field $R9" "Text"
+    !insertmacro MUI_INSTALLOPTIONS_READ $Version ${SCV_INI} "Field $R9" "Text"
   ${EndIf}
 
   ; Try from the highest version, this makes script more effective
   !ifndef MINI_VERSION
-  DetailPrint "Installing $R1"
-  StrCmp $R1 "Brood War v1.16.0" 0 +4
+  DetailPrint "Installing $Version"
+  StrCmp $Version "Brood War v1.16.0" 0 +4
     Call BW1160
     IntOp $Started 1 +
     Goto +2
-  StrCmp $R1 "Brood War v1.15.3" 0 +4
+  StrCmp $Version "Brood War v1.15.3" 0 +4
     Call BW1153
     IntOp $Started 1 +
     Goto +2
-  StrCmp $R1 "Brood War v1.15.2" 0 +4
+  StrCmp $Version "Brood War v1.15.2" 0 +4
     Call BW1152
     IntOp $Started 1 +
     Goto +2
-  StrCmp $R1 "Brood War v1.15.1" 0 +4
+  StrCmp $Version "Brood War v1.15.1" 0 +4
     Call BW1151
     IntOp $Started 1 +
     Goto +2
-  StrCmp $R1 "Brood War v1.15.0" 0 +4
+  StrCmp $Version "Brood War v1.15.0" 0 +4
     Call BW1150
     IntOp $Started 1 +
     Goto +2
-  StrCmp $R1 "Brood War v1.14" 0 +4
+  StrCmp $Version "Brood War v1.14" 0 +4
     Call BW114
     IntOp $Started 1 +
     Goto +2
-  StrCmp $R1 "Brood War v1.13f" 0 +4
+  StrCmp $Version "Brood War v1.13f" 0 +4
     Call BW113f
     IntOp $Started 1 +
     Goto +2
-  StrCmp $R1 "Brood War v1.13e" 0 +4
+  StrCmp $Version "Brood War v1.13e" 0 +4
     Call BW113e
     IntOp $Started 1 +
     Goto +2
-  StrCmp $R1 "Brood War v1.13d" 0 +4
+  StrCmp $Version "Brood War v1.13d" 0 +4
     Call BW113d
     IntOp $Started 1 +
     Goto +2
-  StrCmp $R1 "Brood War v1.13c" 0 +4
+  StrCmp $Version "Brood War v1.13c" 0 +4
     Call BW113c
     IntOp $Started 1 +
     Goto +2
-  StrCmp $R1 "Brood War v1.13b" 0 +4
+  StrCmp $Version "Brood War v1.13b" 0 +4
     Call BW113b
     IntOp $Started 1 +
     Goto +2
-  StrCmp $R1 "Brood War v1.13" 0 +4
+  StrCmp $Version "Brood War v1.13" 0 +4
     Call BW113
     IntOp $Started 1 +
     Goto +2
-  StrCmp $R1 "Brood War v1.12b" 0 +4
+  StrCmp $Version "Brood War v1.12b" 0 +4
     Call BW112b
     IntOp $Started 1 +
     Goto +2
-  StrCmp $R1 "Brood War v1.12" 0 +4
+  StrCmp $Version "Brood War v1.12" 0 +4
     Call BW112
     IntOp $Started 1 +
     Goto +2
-  StrCmp $R1 "Brood War v1.11b" 0 +4
+  StrCmp $Version "Brood War v1.11b" 0 +4
     Call BW111b
     IntOp $Started 1 +
     Goto +2
-  StrCmp $R1 "Brood War v1.11" 0 +4
+  StrCmp $Version "Brood War v1.11" 0 +4
     Call BW111
     IntOp $Started 1 +
     Goto +2
-  StrCmp $R1 "Brood War v1.10" 0 +4
+  StrCmp $Version "Brood War v1.10" 0 +4
     Call BW110
     IntOp $Started 1 +
     Goto +2
-  StrCmp $R1 "Brood War v1.09b" 0 +4
+  StrCmp $Version "Brood War v1.09b" 0 +4
     Call BW109b
     IntOp $Started 1 +
     Goto +2
-  StrCmp $R1 "Brood War v1.09" 0 +4
+  StrCmp $Version "Brood War v1.09" 0 +4
     Call BW109
     IntOp $Started 1 +
     Goto +2
-  StrCmp $R1 "Brood War v1.08b" 0 +4
+  StrCmp $Version "Brood War v1.08b" 0 +4
     Call BW108b
     IntOp $Started 1 +
     Goto +2
-  StrCmp $R1 "Brood War v1.08" 0 +4
+  StrCmp $Version "Brood War v1.08" 0 +4
     Call BW108
     IntOp $Started 1 +
     Goto +2
-  StrCmp $R1 "Brood War v1.07" 0 +4
+  StrCmp $Version "Brood War v1.07" 0 +4
     Call BW107
     IntOp $Started 1 +
     Goto +2
-  StrCmp $R1 "Brood War v1.06" 0 +4
+  StrCmp $Version "Brood War v1.06" 0 +4
     Call BW106
     IntOp $Started 1 +
     Goto +2
-  StrCmp $R1 "Brood War v1.05" 0 +4
+  StrCmp $Version "Brood War v1.05" 0 +4
     Call BW105
     IntOp $Started 1 +
     Goto +2
-  StrCmp $R1 "Brood War v1.04" 0 +4
+  StrCmp $Version "Brood War v1.04" 0 +4
     Call BW104
     IntOp $Started 1 +
     Goto +2
-  StrCmp $R1 "StarCraft v1.04" 0 +4
+  StrCmp $Version "StarCraft v1.04" 0 +4
     Call SC104
     IntOp $Started 1 +
     Goto +2
-  StrCmp $R1 "StarCraft v1.03" 0 +4
+  StrCmp $Version "StarCraft v1.03" 0 +4
     Call SC103
     IntOp $Started 1 +
     Goto +2
-  StrCmp $R1 "StarCraft v1.02" 0 +4
+  StrCmp $Version "StarCraft v1.02" 0 +4
     Call SC102
     IntOp $Started 1 +
     Goto +2
-  StrCmp $R1 "StarCraft v1.01" 0 +4
+  StrCmp $Version "StarCraft v1.01" 0 +4
     Call SC101
     IntOp $Started 1 +
     Goto +2
-  StrCmp $R1 "StarCraft v1.00" 0 +3
+  StrCmp $Version "StarCraft v1.00" 0 +3
     Call SC100
     Goto +2
   DetailPrint "Internal error"
   !endif
 
   !ifdef MINI_VERSION
-  DetailPrint "Installing $R1"
-  StrCmp $R1 "Brood War v1.16.0" 0 +4
+  DetailPrint "Installing $Version"
+  StrCmp $Version "Brood War v1.16.0" 0 +4
     Call BW1160
     IntOp $Started 1 +
     Goto +2
-  StrCmp $R1 "Brood War v1.14" 0 +4
+  StrCmp $Version "Brood War v1.14" 0 +4
     Call BW114
     IntOp $Started 1 +
     Goto +2
-  StrCmp $R1 "Brood War v1.13f" 0 +4
+  StrCmp $Version "Brood War v1.13f" 0 +4
     Call BW113f
     IntOp $Started 1 +
     Goto +2
-  StrCmp $R1 "Brood War v1.08b" 0 +4
+  StrCmp $Version "Brood War v1.08b" 0 +4
     Call BW108b
     Goto +2
   DetailPrint "Internal error"
@@ -332,7 +333,7 @@ FunctionEnd
 
 Function NoCDPatch
   ${If} $NoCD = 1
-    ${If} $R1 S>= "Brood War v1.15.2"
+    ${If} $Version S>= "Brood War v1.15.2"
       # 当 BroodWar.mpq 不存在时，优先使用用户已有的 Install.exe
       IfFileExists "$INSTDIR\BroodWar.mpq" +4 0
         IfFileExists "$INSTDIR\Install.exe" 0 +2
