@@ -115,6 +115,7 @@ BrandingText "${PRODUCT_NAME} ${PRODUCT_VERSION}"
 ;--------------------------------
 ;Variables
 
+  Var ExpressMode
   Var NoCD
   Var RegFix
   Var Started
@@ -320,6 +321,16 @@ Function UpdateBWIcon
   ${EndIf}
 FunctionEnd
 
+Function UpdateNextBtn
+  GetDlgItem $R0 $HWNDPARENT 1
+  ${If} $ExpressMode = 1
+  ${AndIf} $INSTDIR != ""
+    SendMessage $R0 ${WM_SETTEXT} 0 "STR:$(^InstallBtn)"
+  ${Else}
+    SendMessage $R0 ${WM_SETTEXT} 0 "STR:$(^NextBtn)"
+  ${EndIf}
+FunctionEnd
+
 Function ShowVerSelect
   !insertmacro MUI_HEADER_TEXT $(TEXT_IO_TITLE) $(TEXT_IO_SUBTITLE)
   !insertmacro MUI_INSTALLOPTIONS_WRITE ${SCV_INI} "Field 1" "ToolTipText" $(STARCRAFT_TIP)
@@ -335,7 +346,9 @@ Function ShowVerSelect
   !insertmacro MUI_INSTALLOPTIONS_READ $R3 ${SCV_INI} "Field 2" "HWND"
   !insertmacro MUI_INSTALLOPTIONS_READ $R4 ${SCV_INI} "Field 25" "HWND"
   !insertmacro MUI_INSTALLOPTIONS_READ $Version ${SCV_INI} "Field 22" "State"
+  !insertmacro MUI_INSTALLOPTIONS_READ $ExpressMode ${SCV_INI} "Field 3" "State"
   Call UpdateBWIcon
+  Call UpdateNextBtn
   InstallOptionsEx::show
   Pop $R0
 FunctionEnd
@@ -356,12 +369,15 @@ Function LeaveVerSelect
     !insertmacro MUI_INSTALLOPTIONS_READ $Version ${SCV_INI} "Field 22" "State"
     Call UpdateBWIcon
     Abort
+  ${ElseIf} $R0 = 3
+    !insertmacro MUI_INSTALLOPTIONS_READ $ExpressMode ${SCV_INI} "Field 3" "State"
+    Call UpdateNextBtn
+    Abort
   ${EndIf}
 FunctionEnd
 
 Function ExpressMode
-  !insertmacro MUI_INSTALLOPTIONS_READ $R0 ${SCV_INI} "Field 3" "State"
-  ${If} $R0 = 1
+  ${If} $ExpressMode = 1
     SetAutoClose true
     SetDetailsPrint none
     SetDetailsView hide
