@@ -67,6 +67,7 @@ BrandingText "${PRODUCT_NAME} ${PRODUCT_VERSION}"
 ;Variables
 
   Var NoCD
+  Var RegFix
   Var Started
   Var Version
 
@@ -85,6 +86,8 @@ Section "SCVS"
 
   ; NoCD or Original
   !insertmacro MUI_INSTALLOPTIONS_READ $NoCD ${SCV_INI} "Field 4" "State"
+  ; RegFix level
+  !insertmacro MUI_INSTALLOPTIONS_READ $RegFix ${SCV_INI} "Field 26" "State"
 
   System::Call "winmm::timeGetTime() i .R8 ?r"
 
@@ -344,35 +347,42 @@ Function NoCDPatch
 FunctionEnd
 
 Function RegFix
-  WriteRegStr HKLM "SOFTWARE\Blizzard Entertainment\Starcraft" "InstallPath" "$INSTDIR\"
-  WriteRegStr HKLM "SOFTWARE\Blizzard Entertainment\Starcraft" "Program" "$INSTDIR\StarCraft.exe"
-  WriteRegStr HKLM "SOFTWARE\Blizzard Entertainment\Starcraft" "StarEdit" "$INSTDIR\"
-  ${If} $NoCD = 1
-    WriteRegStr HKLM "SOFTWARE\Blizzard Entertainment\Starcraft" "StarCD" "$INSTDIR\"
-  ${Else}
-    DeleteRegValue HKLM "SOFTWARE\Blizzard Entertainment\Starcraft" "StarCD"
+  ; Reset InstallPath & StarCD when selected or grayed
+  ${If} $RegFix >= 1
+    WriteRegStr HKLM "SOFTWARE\Blizzard Entertainment\Starcraft" "InstallPath" "$INSTDIR\"
+    WriteRegStr HKLM "SOFTWARE\Blizzard Entertainment\Starcraft" "Program" "$INSTDIR\StarCraft.exe"
+    WriteRegStr HKLM "SOFTWARE\Blizzard Entertainment\Starcraft" "StarEdit" "$INSTDIR\"
+    WriteRegStr HKLM "SOFTWARE\Blizzard Entertainment\Starcraft\DelOpt0" "Path0" "$INSTDIR\characters"
+    WriteRegStr HKLM "SOFTWARE\Blizzard Entertainment\Starcraft\DelOpt0" "File0" "spc"
+    WriteRegStr HKLM "SOFTWARE\Blizzard Entertainment\Starcraft\DelOpt0" "Path1" "$INSTDIR\characters"
+    WriteRegStr HKLM "SOFTWARE\Blizzard Entertainment\Starcraft\DelOpt0" "File1" "mpc"
+    WriteRegStr HKLM "SOFTWARE\Blizzard Entertainment\Starcraft\DelOpt1" "Path0" "$INSTDIR\save"
+    WriteRegStr HKLM "SOFTWARE\Blizzard Entertainment\Starcraft\DelOpt1" "File0" "sng"
+    WriteRegStr HKLM "SOFTWARE\Blizzard Entertainment\Starcraft\DelOpt1" "Path1" "$INSTDIR\maps\save"
+    WriteRegStr HKLM "SOFTWARE\Blizzard Entertainment\Starcraft\DelOpt1" "File1" "mlt"
+    WriteRegStr HKLM "SOFTWARE\Blizzard Entertainment\Starcraft\DelOpt1" "Path2" "$INSTDIR\save"
+    WriteRegStr HKLM "SOFTWARE\Blizzard Entertainment\Starcraft\DelOpt1" "File2" "snx"
+    WriteRegStr HKLM "SOFTWARE\Blizzard Entertainment\Starcraft\DelOpt1" "Path3" "$INSTDIR\maps\save"
+    WriteRegStr HKLM "SOFTWARE\Blizzard Entertainment\Starcraft\DelOpt1" "File3" "mlx"
+    ${If} $NoCD = 1
+      WriteRegStr HKLM "SOFTWARE\Blizzard Entertainment\Starcraft" "StarCD" "$INSTDIR\"
+    ${Else}
+      DeleteRegValue HKLM "SOFTWARE\Blizzard Entertainment\Starcraft" "StarCD"
+    ${EndIf}
+
+    ; Only reset settings when RegFix selected
+    ${If} $RegFix = 1
+      WriteRegStr HKLM "SOFTWARE\Blizzard Entertainment\Starcraft" "Retail" "y"
+      WriteRegStr HKLM "SOFTWARE\Blizzard Entertainment\Starcraft" "Brood War" "y"
+      DeleteRegValue HKCU "SOFTWARE\Blizzard Entertainment\Starcraft" "Game Speed"
+      DeleteRegValue HKCU "SOFTWARE\Blizzard Entertainment\Starcraft" "music"
+      DeleteRegValue HKCU "SOFTWARE\Blizzard Entertainment\Starcraft" "trigtext"
+      WriteRegStr HKLM "SOFTWARE\Blizzard Entertainment\Starcraft" "Game Speed" "Fastest"
+      WriteRegDWORD HKLM "SOFTWARE\Blizzard Entertainment\Starcraft" "music" 0x00000032
+      WriteRegDWORD HKLM "SOFTWARE\Blizzard Entertainment\Starcraft" "trigtext" 0x00000400
+      WriteRegStr HKLM "SOFTWARE\Blizzard Entertainment\Starcraft\DelOpt1" "Game Subtype" "4 vs 4"
+    ${EndIf}
   ${EndIf}
-  WriteRegStr HKLM "SOFTWARE\Blizzard Entertainment\Starcraft" "Retail" "y"
-  WriteRegStr HKLM "SOFTWARE\Blizzard Entertainment\Starcraft" "Brood War" "y"
-  DeleteRegValue HKCU "SOFTWARE\Blizzard Entertainment\Starcraft" "Game Speed"
-  DeleteRegValue HKCU "SOFTWARE\Blizzard Entertainment\Starcraft" "music"
-  DeleteRegValue HKCU "SOFTWARE\Blizzard Entertainment\Starcraft" "trigtext"
-  WriteRegStr HKLM "SOFTWARE\Blizzard Entertainment\Starcraft" "Game Speed" "Fastest"
-  WriteRegDWORD HKLM "SOFTWARE\Blizzard Entertainment\Starcraft" "music" 0x00000032
-  WriteRegDWORD HKLM "SOFTWARE\Blizzard Entertainment\Starcraft" "trigtext" 0x00000400
-  WriteRegStr HKLM "SOFTWARE\Blizzard Entertainment\Starcraft\DelOpt0" "Path0" "$INSTDIR\characters"
-  WriteRegStr HKLM "SOFTWARE\Blizzard Entertainment\Starcraft\DelOpt0" "File0" "spc"
-  WriteRegStr HKLM "SOFTWARE\Blizzard Entertainment\Starcraft\DelOpt0" "Path1" "$INSTDIR\characters"
-  WriteRegStr HKLM "SOFTWARE\Blizzard Entertainment\Starcraft\DelOpt0" "File1" "mpc"
-  WriteRegStr HKLM "SOFTWARE\Blizzard Entertainment\Starcraft\DelOpt1" "Path0" "$INSTDIR\save"
-  WriteRegStr HKLM "SOFTWARE\Blizzard Entertainment\Starcraft\DelOpt1" "File0" "sng"
-  WriteRegStr HKLM "SOFTWARE\Blizzard Entertainment\Starcraft\DelOpt1" "Path1" "$INSTDIR\maps\save"
-  WriteRegStr HKLM "SOFTWARE\Blizzard Entertainment\Starcraft\DelOpt1" "File1" "mlt"
-  WriteRegStr HKLM "SOFTWARE\Blizzard Entertainment\Starcraft\DelOpt1" "Path2" "$INSTDIR\save"
-  WriteRegStr HKLM "SOFTWARE\Blizzard Entertainment\Starcraft\DelOpt1" "File2" "snx"
-  WriteRegStr HKLM "SOFTWARE\Blizzard Entertainment\Starcraft\DelOpt1" "Path3" "$INSTDIR\maps\save"
-  WriteRegStr HKLM "SOFTWARE\Blizzard Entertainment\Starcraft\DelOpt1" "File3" "mlx"
-  WriteRegStr HKLM "SOFTWARE\Blizzard Entertainment\Starcraft\DelOpt1" "Game Subtype" "4 vs 4"
 FunctionEnd
 
 Function Cleanup
