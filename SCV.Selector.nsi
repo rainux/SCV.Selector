@@ -246,7 +246,6 @@ Section "SCVS"
   System::Call "winmm::timeGetTime() i .R9 ?r"
   IntOp $R9 $R9 - $R8
   DetailPrint "$R9 ms used."
-  System::Free 0
 SectionEnd
 
 ;--------------------------------
