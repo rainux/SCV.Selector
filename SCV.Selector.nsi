@@ -82,10 +82,11 @@ LangString MUI_TEXT_ABORT_SUBTITLE ${LANG_SimpChinese} "SCV Selector √ª”–≥…π¶ÕÍ≥
 
 Name "${PRODUCT_NAME} ${PRODUCT_VERSION}"
 !ifndef MINI_EDITION
-  OutFile "SCV.Selector.Full.${RELEASE_DATE}.exe"
+  !define SCV_SELECTOR "SCV.Selector.Full.${RELEASE_DATE}.exe"
 !else
-  OutFile "SCV.Selector.Mini.${RELEASE_DATE}.exe"
+  !define SCV_SELECTOR "SCV.Selector.Mini.${RELEASE_DATE}.exe"
 !endif
+OutFile ${SCV_SELECTOR}
 !ifndef DEBUG
   InstallDirRegKey HKLM "SOFTWARE\Blizzard Entertainment\Starcraft" "InstallPath"
 !else
@@ -97,6 +98,26 @@ Caption "${PRODUCT_NAME} ${PRODUCT_VERSION}"
 BrandingText "${PRODUCT_NAME} ${PRODUCT_VERSION}"
 
 !include "LogicLib.nsh"
+
+;--------------------------------
+;Version Information
+
+  VIProductVersion "0.${RELEASE_DATE}"
+  VIAddVersionKey /LANG=${LANG_ENGLISH} "ProductName" "SCV Selector"
+  VIAddVersionKey /LANG=${LANG_ENGLISH} "CompanyName" "Rainux"
+  VIAddVersionKey /LANG=${LANG_ENGLISH} "LegalCopyright" "(C) Rainux"
+  VIAddVersionKey /LANG=${LANG_ENGLISH} "FileDescription" "SCV Selector can switches your StarCraft to any version between 1.00 and 1.16.0 on the fly"
+  VIAddVersionKey /LANG=${LANG_ENGLISH} "FileVersion" "${PRODUCT_VERSION}"
+  VIAddVersionKey /LANG=${LANG_ENGLISH} "InternalName" "SCV.Selector"
+  VIAddVersionKey /LANG=${LANG_ENGLISH} "OriginalFilename" ${SCV_SELECTOR}
+
+  VIAddVersionKey /LANG=${LANG_SimpChinese} "ProductName" "SCV Selector"
+  VIAddVersionKey /LANG=${LANG_SimpChinese} "CompanyName" "Rainux"
+  VIAddVersionKey /LANG=${LANG_SimpChinese} "LegalCopyright" "(C) Rainux"
+  VIAddVersionKey /LANG=${LANG_SimpChinese} "FileDescription" "SCV Selector ø…“‘øÏÀŸµÿΩ´ StarCraft «–ªªµΩ 1.00 ÷¡ 1.16.0 ÷Æº‰µƒ»Œ“‚∞Ê±æ"
+  VIAddVersionKey /LANG=${LANG_SimpChinese} "FileVersion" "${PRODUCT_VERSION}"
+  VIAddVersionKey /LANG=${LANG_SimpChinese} "InternalName" "SCV.Selector"
+  VIAddVersionKey /LANG=${LANG_SimpChinese} "OriginalFilename" ${SCV_SELECTOR}
 
 ;--------------------------------
 ;Reserve Files
