@@ -261,7 +261,7 @@ Function .onInit
 FunctionEnd
 
 LangString TEXT_IO_TITLE ${LANG_ENGLISH} "StarCraft Version Select"
-LangString TEXT_IO_SUBTITLE ${LANG_ENGLISH} "Please select the version of StarCraft you want to use."
+LangString TEXT_IO_SUBTITLE ${LANG_ENGLISH} "StarCraft Location: $INSTDIR"
 
 Function UpdateBWIcon
   ${If} $Version S>= "Brood War v1.14"
