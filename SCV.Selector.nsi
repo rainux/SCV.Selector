@@ -2,11 +2,11 @@
 
 ; HM NIS Edit Wizard helper defines
 
-!ifdef MINI_VERSION
-  !define PRODUCT_NAME "SCV Selector (Mini Version)"
+!ifdef MINI_EDITION
+  !define PRODUCT_NAME "SCV Selector (Mini Edition)"
   !define SCV_INI "SCV.mini.ini"
 !else
-  !define PRODUCT_NAME "SCV Selector (Full Version)"
+  !define PRODUCT_NAME "SCV Selector (Full Edition)"
   !define SCV_INI "SCV.ini"
 !endif
 !define RELEASE_DATE "2008.12.03"
@@ -34,7 +34,7 @@ Page custom ShowVerSelect LeaveVerSelect
 ; MUI end ------
 
 Name "${PRODUCT_NAME} ${PRODUCT_VERSION}"
-!ifndef MINI_VERSION
+!ifndef MINI_EDITION
   OutFile "SCV.Selector.Full.${RELEASE_DATE}.exe"
 !else
   OutFile "SCV.Selector.Mini.${RELEASE_DATE}.exe"
@@ -92,7 +92,7 @@ Section "SCVS"
   System::Call "winmm::timeGetTime() i .R8 ?r"
 
   ; Try from the highest version, this makes script more effective
-  !ifndef MINI_VERSION
+  !ifndef MINI_EDITION
   DetailPrint "Installing $Version"
   StrCmp $Version "Brood War v1.16.0" 0 +4
     Call BW1160
@@ -216,7 +216,7 @@ Section "SCVS"
   DetailPrint "Internal error"
   !endif
 
-  !ifdef MINI_VERSION
+  !ifdef MINI_EDITION
   DetailPrint "Installing $Version"
   StrCmp $Version "Brood War v1.16.0" 0 +4
     Call BW1160
@@ -386,7 +386,7 @@ Function RegFix
 FunctionEnd
 
 Function Cleanup
-  !ifndef MINI_VERSION
+  !ifndef MINI_EDITION
   Delete "$INSTDIR\BNUpdate.exe"
   Delete "$INSTDIR\bnupdate.log"
   Delete "$INSTDIR\BroodUnits.doc"
@@ -419,7 +419,7 @@ Function Cleanup
   Delete "$INSTDIR\storm.dll"
 FunctionEnd
 
-!ifndef MINI_VERSION
+!ifndef MINI_EDITION
 Function SC100
   File "versions\SC.v1.00\*.*"
 FunctionEnd
@@ -550,7 +550,7 @@ Function BW1160
 FunctionEnd
 !endif
 
-!ifdef MINI_VERSION
+!ifdef MINI_EDITION
 # 对于 Mini 版本，跳过版本可能因为新版本中某文件没有修改而导致丢失必要的文件，必须反复检查
 Function BW108b
   File "versions\SC.v1.00\Local.dll"
