@@ -30,6 +30,55 @@ Page custom ShowVerSelect LeaveVerSelect
 
 ; Language files
 !insertmacro MUI_LANGUAGE "English"
+!insertmacro MUI_LANGUAGE "SimpChinese"
+
+LangString TEXT_IO_TITLE ${LANG_ENGLISH} "StarCraft Version Select"
+LangString TEXT_IO_SUBTITLE ${LANG_ENGLISH} "StarCraft Location: $INSTDIR"
+
+LangString STARCRAFT_TIP ${LANG_ENGLISH} "\r\nStarCraft, back to the Age without Medic, Lurker and Dark Templar."
+LangString BROODWAR_TIP ${LANG_ENGLISH} "\r\nStarCraft: Brood War, do you remember morph Zergling to Mutalisk in 1.04, sea of Hydralisks from 3 Hatcheries in 1.07?"
+LangString EXPRESS_MODE_TIP ${LANG_ENGLISH} "\r\nChecked: Use StarCraft installation folder detected in Registry, and auto close when done. If there's no StarCraft installation information in Registry, then use current folder.\r\n\r\nUnchecked: Choose StarCraft installation folder yourself, default to the StarCraft installation folder detected in Registry."
+LangString NOCD_TIP ${LANG_ENGLISH} "\r\nChecked: For versions before 1.15.2, apply the simplest No-CD patch (modify storm.dll with only 1 byte data, provided by keakon from forum of YaoYuan.com). Use this No-CD patch will cause you cannot play on Battle.net (Of course you can still play in LAN with IPX or UDP).\r\nFor version 1.15.2 and later, since Blizzard provided official No-CD support, to play without CD just ensure either BroodWar.mpq or StarCraft.mpq exists in your StarCraft installation folder.\r\nBoth cases require you copy the file Install.exe from StarCraft CD to StarCraft installation folder, for versions before 1.15.2 the filename must be Install.exe, for version 1.15.2 and later, the filename must be BroodWar.mpq or StarCraft.mpq. So if either Install.exe or BroodWar.mpq exists in StarCraft installation folder, SCV Selector will change it's name to suit with current selected version, else will install a minimal BroodWar.mpq without any content, this will allow StarCraft runs without CD, but also without background music && official single player mission.\r\n\r\nUnchecked: Do not apply No-CD patch, for versions before 1.15.2 you need other No-CD tool or StarCraft CD (or CD image with virtual CD tool) to play."
+LangString REGFIX_TIP ${LANG_ENGLISH} "\r\nDefault (Grayed): Modify Registry to change StarCraft installation folder to the folder selected with SCV Selector, this ensure StarCraft read && write game data such as player ID, maps from correct folder. If NoCD checked, for No-CD patch works with versions before 1.15.2, also change the StarCraft CD location to StarCraft installation folder.\r\n\r\nChecked: In addition to the StarCraft installation folder && CD location fixing in Default state, also reset some other settings of StarCraft to default value. This option useful when you copied StarCraft installation folder from another computer, or just want to fix the confused StarCraft settings in Registry.\r\n\r\nUnchecked (Not Recommended): Do not modify any settings in Registry. StarCraft may have strange behavior since installation folder in Registry is different from the actual installation folder, even cause No-CD patch don't works for versions before 1.15.2."
+LangString RAINUX_ORG_TIP ${LANG_ENGLISH} "\r\nVisit SCV Selector release page."
+
+LangString MUI_TEXT_DIRECTORY_TITLE ${LANG_ENGLISH} "Choose StarCraft Location"
+LangString MUI_TEXT_DIRECTORY_SUBTITLE ${LANG_ENGLISH} "Choose the folder of your StarCraft installation."
+LangString ^DirText ${LANG_ENGLISH} "SCV Selector detected your StarCraft installation in the following folder. To use with a different StarCraft installation, click Browse and select it."
+LangString ^DirBrowseText ${LANG_ENGLISH} "Select the folder of StarCraft installation you want to use:"
+LangString ^DirSubText ${LANG_ENGLISH} "StarCraft Installation Folder"
+LangString ^InstallBtn ${LANG_ENGLISH} "&Go Go Go!"
+
+LangString MUI_TEXT_INSTALLING_TITLE ${LANG_ENGLISH} "Working"
+LangString MUI_TEXT_INSTALLING_SUBTITLE ${LANG_ENGLISH} "Please wait while SCV Selector switching StarCraft to $Version."
+LangString MUI_TEXT_FINISH_TITLE ${LANG_ENGLISH} "Complete"
+LangString MUI_TEXT_FINISH_SUBTITLE ${LANG_ENGLISH} "SCV Selector completed the operation successfully."
+LangString MUI_TEXT_ABORT_TITLE ${LANG_ENGLISH} "Aborted"
+LangString MUI_TEXT_ABORT_SUBTITLE ${LANG_ENGLISH} "SCV Selector didn't completed the operation successfully."
+
+LangString TEXT_IO_TITLE ${LANG_SimpChinese} "StarCraft Version Select"
+LangString TEXT_IO_SUBTITLE ${LANG_SimpChinese} "StarCraft 位置: $INSTDIR"
+
+LangString STARCRAFT_TIP ${LANG_SimpChinese} "\r\nStarCraft，回到没有 Medic 没有 Lurker 没有 Dark Templar 的时代。"
+LangString BROODWAR_TIP ${LANG_SimpChinese} "\r\nStarCraft: Brood War, 还记得 1.04 的小狗变飞龙，1.07 的三基地刺蛇海么？"
+LangString EXPRESS_MODE_TIP ${LANG_SimpChinese} "\r\n选中: 直接使用从注册表里探测到的 StarCraft 安装文件夹，完成后自动关闭。若注册表里没有 StarCraft 安装信息，则使用当前文件夹。\r\n\r\n不选: 自己选择 StarCraft 安装文件夹，默认是从注册表里探测到的 StarCraft 安装文件夹。"
+LangString NOCD_TIP ${LANG_SimpChinese} "\r\n选中: 对于 1.15.2 以前的版本，应用最简单的免 CD 补丁（YaoYuan.com 论坛网友 keakon 提供的只修改 storm.dll 一个字节的方式）。使用这种免 CD 补丁将无法进入官方 Battle.net 进行网络对战（当然，IPX 或 UDP 等我们最常用的局域网对战模式是不会受到影响的）。\r\n对于 1.15.2 及以后的版本，由于 Blizzard 已经提供官方的免 CD 支持，只要保证 StarCraft 安装文件夹下有 BroodWar.mpq 或者 StarCraft.mpq 这两个文件其中之一即可免 CD。\r\n这两种情况都需要从 StarCraft 安装光盘上复制 Install.exe 到 StarCraft 安装文件夹，对于 1.15.2 之前的版本文件名必须是 Install.exe ，对于 1.15.2 及以后的版本文件名必须是 BroodWar.mpq 或 StarCraft.mpq。因此如果 StarCraft 安装文件夹下已经有 Install.exe 或 BroodWar.mpq，SCV Selector 会将其改名以适合当前所选择的版本，如果两个文件都不存在，则会安装一个无任何内容的最精简版本 BroodWar.mpq，这样做能保证 StarCraft 免 CD 运行，但游戏将没有背景音乐并且无法进入单人模式的剧情战役。\r\n\r\n不选: 不应用免 CD 补丁，需要其它免 CD 工具或 StarCraft 原版光盘（或光盘镜像和虚拟光驱工具）才能进行游戏。"
+LangString REGFIX_TIP ${LANG_SimpChinese} "\r\n默认（灰色）: 修改注册表里的 StarCraft 安装文件夹为 SCV Selector 中选择的文件夹，确保 StarCraft 在正确的文件夹读写玩家 ID、地图等游戏数据。如果选中 NoCD，对于 1.15.2 以前的版本，为了免 CD 补丁正常工作，也会把 StarCraft 光盘位置修改为 StarCraft 安装文件夹。\r\n\r\n选中: 除了默认状态时的 StarCraft 安装文件夹、光盘位置修复之外，还会将 StarCraft 的其它一些设置重置为默认值。这个选项主要用于从其它计算机复制 StarCraft 安装文件夹后免安装运行，以及修复混乱的 StarCraft 注册表设置。\r\n\r\n不选（不推荐）: 不修改注册表中的任何设置。有可能因为注册表中的 StarCraft 安装文件夹和实际的安装文件夹不一致而出现异常情况，甚至导致免 CD 补丁对 1.15.2 以前的版本无效。"
+LangString RAINUX_ORG_TIP ${LANG_SimpChinese} "\r\n访问 SCV Selector 发布页面。"
+
+LangString MUI_TEXT_DIRECTORY_TITLE ${LANG_SimpChinese} "选择 StarCraft 位置"
+LangString MUI_TEXT_DIRECTORY_SUBTITLE ${LANG_SimpChinese} "选择安装 StarCraft 的文件夹。"
+LangString ^DirText ${LANG_SimpChinese} "SCV Selector 探测到 StarCraft 安装在以下文件夹。如果想使用安装在其它文件夹的 StarCraft，单击 [浏览(B)] 并选择它。"
+LangString ^DirBrowseText ${LANG_SimpChinese} "选择想要使用的 StarCraft 所在的文件夹:"
+LangString ^DirSubText ${LANG_SimpChinese} "StarCraft 安装文件夹"
+LangString ^InstallBtn ${LANG_SimpChinese} "&Go Go Go!"
+
+LangString MUI_TEXT_INSTALLING_TITLE ${LANG_SimpChinese} "正在工作"
+LangString MUI_TEXT_INSTALLING_SUBTITLE ${LANG_SimpChinese} "SCV Selector 正在将 StarCraft 转换到 $Version，请稍侯..."
+LangString MUI_TEXT_FINISH_TITLE ${LANG_SimpChinese} "完成"
+LangString MUI_TEXT_FINISH_SUBTITLE ${LANG_SimpChinese} "SCV Selector 成功完成操作。"
+LangString MUI_TEXT_ABORT_TITLE ${LANG_SimpChinese} "中止"
+LangString MUI_TEXT_ABORT_SUBTITLE ${LANG_SimpChinese} "SCV Selector 没有成功完成操作。"
 
 ; MUI end ------
 
@@ -252,15 +301,14 @@ SectionEnd
 ;Installer Functions
 
 Function .onInit
+  ; Use locale of current user as $LANGUAGE
+  System::Call "Kernel32::GetUserDefaultLCID()i .a"
   !insertmacro MUI_INSTALLOPTIONS_EXTRACT ${SCV_INI}
   !insertmacro MUI_INSTALLOPTIONS_EXTRACT_AS "data\SC.ico" "SC.ico"
   !insertmacro MUI_INSTALLOPTIONS_EXTRACT_AS "data\BW.ico" "BW.ico"
   !insertmacro MUI_INSTALLOPTIONS_WRITE ${SCV_INI} "Field 1" "Text" "$PLUGINSDIR\SC.ico"
   !insertmacro MUI_INSTALLOPTIONS_WRITE ${SCV_INI} "Field 2" "Text" "$PLUGINSDIR\BW.ico"
 FunctionEnd
-
-LangString TEXT_IO_TITLE ${LANG_ENGLISH} "StarCraft Version Select"
-LangString TEXT_IO_SUBTITLE ${LANG_ENGLISH} "StarCraft Location: $INSTDIR"
 
 Function UpdateBWIcon
   ${If} $Version S>= "Brood War v1.14"
@@ -273,7 +321,14 @@ Function UpdateBWIcon
 FunctionEnd
 
 Function ShowVerSelect
-  !insertmacro MUI_HEADER_TEXT "$(TEXT_IO_TITLE)" "$(TEXT_IO_SUBTITLE)"
+  !insertmacro MUI_HEADER_TEXT $(TEXT_IO_TITLE) $(TEXT_IO_SUBTITLE)
+  !insertmacro MUI_INSTALLOPTIONS_WRITE ${SCV_INI} "Field 1" "ToolTipText" $(STARCRAFT_TIP)
+  !insertmacro MUI_INSTALLOPTIONS_WRITE ${SCV_INI} "Field 2" "ToolTipText" $(BROODWAR_TIP)
+  !insertmacro MUI_INSTALLOPTIONS_WRITE ${SCV_INI} "Field 25" "ToolTipText" $(BROODWAR_TIP)
+  !insertmacro MUI_INSTALLOPTIONS_WRITE ${SCV_INI} "Field 3" "ToolTipText" $(EXPRESS_MODE_TIP)
+  !insertmacro MUI_INSTALLOPTIONS_WRITE ${SCV_INI} "Field 4" "ToolTipText" $(NOCD_TIP)
+  !insertmacro MUI_INSTALLOPTIONS_WRITE ${SCV_INI} "Field 26" "ToolTipText" $(REGFIX_TIP)
+  !insertmacro MUI_INSTALLOPTIONS_WRITE ${SCV_INI} "Field 24" "ToolTipText" $(RAINUX_ORG_TIP)
   Push $R0
   InstallOptionsEx::initDialog /NOUNLOAD $PLUGINSDIR\${SCV_INI}
   ; $R3 is handle of BW icon, $R4 is handle of BW.1.14 icon
