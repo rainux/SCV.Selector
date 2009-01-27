@@ -106,7 +106,7 @@ BrandingText "${PRODUCT_NAME} ${PRODUCT_VERSION}"
   VIAddVersionKey /LANG=${LANG_ENGLISH} "ProductName" "SCV Selector"
   VIAddVersionKey /LANG=${LANG_ENGLISH} "CompanyName" "Rainux"
   VIAddVersionKey /LANG=${LANG_ENGLISH} "LegalCopyright" "(C) Rainux"
-  VIAddVersionKey /LANG=${LANG_ENGLISH} "FileDescription" "SCV Selector can switches your StarCraft to any version between 1.00 and 1.16.0 on the fly"
+  VIAddVersionKey /LANG=${LANG_ENGLISH} "FileDescription" "SCV Selector can switches your StarCraft to any version between 1.00 and 1.16.1 on the fly"
   VIAddVersionKey /LANG=${LANG_ENGLISH} "FileVersion" "${PRODUCT_VERSION}"
   VIAddVersionKey /LANG=${LANG_ENGLISH} "InternalName" "SCV.Selector"
   VIAddVersionKey /LANG=${LANG_ENGLISH} "OriginalFilename" ${SCV_SELECTOR}
@@ -114,7 +114,7 @@ BrandingText "${PRODUCT_NAME} ${PRODUCT_VERSION}"
   VIAddVersionKey /LANG=${LANG_SimpChinese} "ProductName" "SCV Selector"
   VIAddVersionKey /LANG=${LANG_SimpChinese} "CompanyName" "Rainux"
   VIAddVersionKey /LANG=${LANG_SimpChinese} "LegalCopyright" "(C) Rainux"
-  VIAddVersionKey /LANG=${LANG_SimpChinese} "FileDescription" "SCV Selector 可以快速地将 StarCraft 切换到 1.00 至 1.16.0 之间的任意版本"
+  VIAddVersionKey /LANG=${LANG_SimpChinese} "FileDescription" "SCV Selector 可以快速地将 StarCraft 切换到 1.00 至 1.16.1 之间的任意版本"
   VIAddVersionKey /LANG=${LANG_SimpChinese} "FileVersion" "${PRODUCT_VERSION}"
   VIAddVersionKey /LANG=${LANG_SimpChinese} "InternalName" "SCV.Selector"
   VIAddVersionKey /LANG=${LANG_SimpChinese} "OriginalFilename" ${SCV_SELECTOR}
@@ -163,6 +163,10 @@ Section "SCVS"
   ; Try from the highest version, this makes script more effective
   !ifndef MINI_EDITION
   DetailPrint "Installing $Version"
+  StrCmp $Version "Brood War v1.16.1" 0 +4
+    Call BW1161
+    IntOp $Started 1 +
+    Goto +2
   StrCmp $Version "Brood War v1.16.0" 0 +4
     Call BW1160
     IntOp $Started 1 +
@@ -287,8 +291,8 @@ Section "SCVS"
 
   !ifdef MINI_EDITION
   DetailPrint "Installing $Version"
-  StrCmp $Version "Brood War v1.16.0" 0 +4
-    Call BW1160
+  StrCmp $Version "Brood War v1.16.1" 0 +4
+    Call BW1161
     IntOp $Started 1 +
     Goto +2
   StrCmp $Version "Brood War v1.14" 0 +4
@@ -637,6 +641,10 @@ FunctionEnd
 Function BW1160
   File "versions\BW.v1.16.0\*.*"
 FunctionEnd
+
+Function BW1161
+  File "versions\BW.v1.16.1\*.*"
+FunctionEnd
 !endif
 
 !ifdef MINI_EDITION
@@ -669,12 +677,12 @@ Function BW114
   File "versions\BW.v1.14\storm.dll"
 FunctionEnd
 
-Function BW1160
-  File "versions\BW.v1.15.3\Patch_rt.mpq"
-  File "versions\BW.v1.16.0\battle.snp"
-  File "versions\BW.v1.16.0\patch.txt"
-  File "versions\BW.v1.16.0\standard.snp"
-  File "versions\BW.v1.16.0\StarCraft.exe"
-  File "versions\BW.v1.16.0\storm.dll"
+Function BW1161
+  File "versions\BW.v1.16.1\Patch_rt.mpq"
+  File "versions\BW.v1.16.1\battle.snp"
+  File "versions\BW.v1.16.1\patch.txt"
+  File "versions\BW.v1.16.1\standard.snp"
+  File "versions\BW.v1.16.1\StarCraft.exe"
+  File "versions\BW.v1.16.1\storm.dll"
 FunctionEnd
 !endif

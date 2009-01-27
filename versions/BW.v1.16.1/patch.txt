@@ -1,0 +1,962 @@
+Starcraft and Brood War Patch Information
+
+--------------------------------------------------------------------------------
+- patch 1.16.1
+--------------------------------------------------------------------------------
+
+Feature Changes
+
+- In-game Speed Options menu now has a "Enable CPU Throttling" checkbox. 
+  Enabling this option will allow StarCraft to consume fewer CPU cycles. By 
+  default this option is off.
+
+Bug Fixes
+
+- Fixed an issue with the reply feature where any character followed by a "r "
+  was being treated as a reply.
+- Removed an unnecessary delay when processing palette cycling updates.
+- Lessened the imposed delay in the CPU Throttling feature.
+
+--------------------------------------------------------------------------------
+- patch 1.16.0
+--------------------------------------------------------------------------------
+
+Feature Changes
+
+- In-game chat is now saved in replays. Note: whispers are not saved.
+- Hitting the Escape key while in the chat room will clear your typed text.
+- "/reply" (or just "/r") will send a whisper to person who most recently whispered you.
+
+Bug Fixes
+
+- Fixed localization issues with "from" and "to" in whispers.
+- Starcraft now only uses as much CPU as it needs to run smoothly.
+
+Exploits
+
+- Fixed an exploit which allowed Zerg players to gain minerals through mutations.
+- Fixed an exploit which allowed Zerg players to recycle an upgrading building.
+- Fixed an exploit which allowed Zerg players to extend their creep with a drone.
+- Fixed an exploit which allowed Zerg players to move Drones over impassable terrain.
+- Fixed an exploit which allowed Terran players to drop a nuke anywhere on the map.
+- Fixed an exploit which allowed players to pause the game while in the pre-game lobby.
+
+--------------------------------------------------------------------------------
+- patch 1.15.3
+--------------------------------------------------------------------------------
+
+  Bug Fixes
+- Fixed a communication bug affecting third party leagues.
+- Alt-F6 no longer stalls the game on Windows.
+- Game now works correctly on versions of Mac OS X which do not support 256-color
+  mode.
+
+--------------------------------------------------------------------------------
+- patch 1.15.2
+--------------------------------------------------------------------------------
+
+  Feature Changes
+
+- StarCraft and StarCraft: BroodWar no longer require the CD while playing the
+  game.  To play without the CD, please follow the following instructions:
+
+- Windows Users:
+    - Make sure you have "Hide extensions for known types" unchecked under
+      Explorer Folder Options.
+    - If you own only StarCraft, copy "INSTALL.EXE" from the StarCraft CD to 
+      your StarCraft folder and rename it to "StarCraft.mpq".
+    - If you own StarCraft: Brood War, copy "INSTALL.EXE" from the StarCraft:
+      Brood War CD to your StarCraft folder and rename it to "BroodWar.mpq".
+
+- Mac users:
+    - If you own only StarCraft, copy "StarCraft Archive" from the StarCraft CD
+      to your StarCraft folder.
+    - If you own StarCraft: Brood War, copy "Brood War Archive" from the 
+      StarCraft: Brood War CD to your StarCraft folder.
+
+--------------------------------------------------------------------------------
+- patch 1.15.1
+--------------------------------------------------------------------------------
+
+  Bug Fixes
+
+- Fixed a replay saving bug that occasionally crashed games.
+- Fixed a bug where the map download progress was not shown.
+- Pressing alt-f4 while in Starcraft and logged into a league now logs you out
+  of the league.
+- Updated some of the localization for the league page.
+- Fixed an exploit that allowed nukes to fall anywhere on the map.
+
+--------------------------------------------------------------------------------
+- patch 1.15.0
+--------------------------------------------------------------------------------
+
+  Feature Changes
+
+- Approved organizations can now operate StarCraft leagues. See
+  http://www.battle.net.
+- Replays are automatically saved as LastReplay.rep.
+
+
+  Bug Fixes
+
+- Fixed a bug that allowed burrowed units to be stacked.
+
+  Exploits
+
+- Fixed a vulture exploit that crashed games.
+- Fixed an exploit that allowed the rally points of others to be set.
+- Fixed a multicommand hack that crashed Macintosh players.
+
+--------------------------------------------------------------------------------
+- patch 1.14.0
+--------------------------------------------------------------------------------
+
+  Feature Changes
+
+- For Top vs. Bottom games, the default chat filter is now 'Chat To Allies'.
+- In-game chat messages now show the speaker's name in his/her team color.
+- Users can now use the mouse wheel to scroll chat and selection boxes in 
+  Windows 98 (or later) and Macintosh OS X.
+- Screen shots now use a time/date stamp; they are no longer limited to 100.
+- The high-color application icon from the Macintosh version is now used on PC.
+- Small corrections to the Lost Temple and Dire Straits maps.
+
+  Bug Fixes
+
+- Fixed Hatchery cancellation crash bug.
+- Fixed crash that can occur when SCVs are repairing a unit boarding a Dropship.
+- Fixed crash when Mac users very quickly cancel connection to Battle.net.
+- Fixed a scoring bug that gave Zerg unit points for building cancellation.
+- Users can now take screen shots on Macintosh OS X.
+- Updated Battle.net account creation information text.
+- Logging onto an account closed for a Battle.net Terms of Service violation
+  will now say the account is closed, rather than 'invalid password'.
+- Fixed bug preventing Portuguese StarCraft clients from receiving patches from 
+  Battle.net.  Portuguese users must still patch to this level manually, but
+  subsequent patches can be obtained automatically from Battle.net.
+- No longer displays control characters in Battle.net's map description pane.
+- Color codes and control codes are no longer allowed in chat messages.
+- Fixed a crash in StarEdit when attempting to save modified Blizzard maps.
+- Fixed undesired text wrapping in Spanish and Portuguese Battle.net screens.
+- Fixed a rare crash in multiplayer games.
+
+  Exploits
+
+- Fixed the Nydus Canal cancellation bug that allowed creating a mobile exit.
+- Fixed two exploits that allowed players to gain minerals very quickly.
+- Fixed exploit that allowed Zerg buildings to become cloaked.
+- Fixed exploit that allowed units to kill themselves instantly.
+- Fixed exploit that allowed Command Center infestation without a Queen.
+- Fixed exploit that allowed Command Center infestation from a distance.
+- Fixed exploit that allowed players to float Zerg Drones over obstacles.
+- Fixed exploit that allowed worker units to mine at a distance.
+- Fixed exploit that allowed Terran buildings to lift off while training units.
+- Fixed exploit that allowed SCVs to repair Protoss buildings.
+- Fixed exploit that allowed SCVs to detach Larvae from Hatcheries.
+- Fixed exploit that allowed morphing Terran and Protoss buildings.
+- Fixed exploit that allowed buildings to be stacked on top of each other.
+- Playing against illegally named players on Battle.net no longer results in a
+  disconnect game result.
+
+--------------------------------------------------------------------------------
+- patch 1.13f
+--------------------------------------------------------------------------------
+
+- Fixed several bugs that contributed to game exploits.
+
+--------------------------------------------------------------------------------
+- patch 1.13e
+--------------------------------------------------------------------------------
+
+- Fixed several bugs that contributed to game exploits.
+
+--------------------------------------------------------------------------------
+- patch 1.13d
+--------------------------------------------------------------------------------
+
+- Fixed a bug that prevented the training of infested terrans.
+
+--------------------------------------------------------------------------------
+- patch 1.13c
+--------------------------------------------------------------------------------
+
+- Fixed a bug involving zerg buildings.
+- Fixed a bug related to minimap unit ordering during replays.
+
+--------------------------------------------------------------------------------
+- patch 1.13b
+--------------------------------------------------------------------------------
+
+- Fixed a bug where some maps could cause the game to crash.
+
+--------------------------------------------------------------------------------
+- patch 1.13
+--------------------------------------------------------------------------------
+
+  Feature Changes
+
+- Your units displayed within the minimap will now always be on top to
+  ensure that they are not hidden by another player's units.
+ 
+- Changed the default Battle.net font for Korean Windows 9x to Gulim 9
+  to improve readability.
+
+  Bug Fixes
+
+- Fixed several bugs that contributed to game exploits.
+- Fixed a Korean character bug in chat.
+- Fixed a German hotkey bug in Battle.net chat.
+- Fixed a typo in the Battle.net register email screen.
+
+--------------------------------------------------------------------------------
+- patch 1.12b
+--------------------------------------------------------------------------------
+
+- Fixed bugs related to Korean chat on Windows 95/98/Me.
+
+--------------------------------------------------------------------------------
+- patch 1.12
+--------------------------------------------------------------------------------
+   
+  New Features
+
+- Changed Speed from "Fast" to Fastest" for Ladder Games.
+
+- You now can preview your map in the Multiplayer chat screen.
+
+- Added feature that allows the creator of a private Battle.net game to make
+  the game public under the creator's name in Multiplayer Chat screen.
+
+- Added full Korean language support for Battle.net and in-game.
+
+- Added a Friends List Feature and button that allows you to keep track of your
+  friends on Battle.net.
+
+- Added Password Recovery and email registration features (like Warcraft 3 and
+  Diablo 2) so you can recover your password via email.
+
+- Added Friend mail feature that enables you to email your friends.
+
+  ** Please go to www.battle.net/mail for more information on Battle.net mail
+     and password recovery features.
+
+- Changed the default race type in single custom games to Random.
+
+- It now remembers your last map and folder setting when you create single or
+  multi player games.
+
+- Brood War will now show 'maps\BroodWar' folder as your default map folder.
+
+- When a building is selected and if a ground rally point is set the rally
+  point will briefly animate.
+
+- Added minimap ping (Alt-left-click on minimap to show graphic location.)
+
+- Added alliance colors on units - Shift-Tab changes your color to green,
+  your allies to yellow and your enemies to red.
+
+- Added right-click feature that will set your building rally point.
+
+- Added shift-# to add a unit to a control group.
+
+- The mouse cursor stays on the game's monitor in multi-monitor environments.
+
+    Updated Maps
+
+- Lost Temple has been updated, while Dire Straits and Rivarly have been
+  slightly tweaked to balance resources and space for building.
+
+- All maps have been resigned. If you have moved standard maps to different
+  folders you must do so again. If you have maps downloaded from our FTP
+  site you must do so again.
+
+     Bug Fixes
+
+- Fixed bug related to seeing Question marks instead of Korean characters
+  when using /where command in battle.net
+
+- Fixed a bug that hindered Korean text in Battle.net chatrooms and game
+  advertisements.
+
+--------------------------------------------------------------------------------
+- patch 1.11b
+--------------------------------------------------------------------------------
+
+- Fixed a bug that allowed SCV's to heal Marines.
+- Fixed a bug that allowed Zerg to build without the need for creep.
+- Fixed a bug that allowed buildings to be stacked on top of each other.
+- Fixed a Mac bug that prevented StarEdit from running.
+- Fixed a Mac bug where background music stopped after the first piece.
+
+--------------------------------------------------------------------------------
+- patch 1.11
+--------------------------------------------------------------------------------
+
+- Fixed a bug that hindered sound on NT machines. 
+- Fixed a bug that enabled you to make a Command Center slide into a location
+  by building a Comstat Station then canceling it due to lack of resources. 
+- Fixed a bug related to a Drone flying when surrounded by other units.
+- Fixed a bug that would give you an assertion when you tell a drone to burrow 
+  as it is about to morph into a building.
+- Fixed a bug that caused Templars to fly across the map when interrupting an 
+  Archon Merge.
+- Fixed a bug involving a drone getting confused when receiving a second build
+  order while in transit to complete the first one. 
+
+--------------------------------------------------------------------------------
+- patch 1.10
+--------------------------------------------------------------------------------
+
+- Fixed a bug involving burrowed units - if a burrowed lurker was attacked by
+  air, it would stop acquiring other targets. Changed so that non-AI lurkers
+  won't unburrow when attacked by air, which is a better idea all around.
+
+- Fixed a bug where a drone could skate across terrain to an arbitrary
+  destination after failing to build an extractor.
+
+--------------------------------------------------------------------------------
+- patch 1.09b
+--------------------------------------------------------------------------------
+
+- Disconnects will be counted as losses in CompUSA games.
+
+--------------------------------------------------------------------------------
+- patch 1.09
+--------------------------------------------------------------------------------
+
+- Fixed various replay issues.
+
+- Fixed a bug where Protoss and Terran victory and defeat background screens did 
+  not display.
+
+- Siege tanks no longer explode when placed on a beacon.
+
+- Added LAN play via UDP
+
+- Fixed latency issue with Windows 2000
+
+- Added template type, CompUSA. http://gamefixx.compusa.com/tournament/default.asp
+
+*****Modifications (North American versions only)*****
+
+- Please note that included with this patch is a .dll file that relays 
+  back to Blizzard the hardware configuration of the system on which the 
+  patch is installed.  This file will be effective in North America only.
+
+  In keeping with our policy of protecting user privacy, we will not be 
+  collecting any personal information, nor will we be able to associate 
+  any hardware information with any particular user.  We will only be 
+  recording CPU, RAM, operating system, video card, and sound card 
+  information.
+
+  The reason we are doing this is to help our development teams optimize 
+  our current and future games and battle.net for various hardware 
+  configurations.  The information we receive will help us tailor our software 
+  to meet the system requirements of our customers and help us to enhance 
+  their overall gameplay experience.  If you have any questions or 
+  concerns about this procedure, please email us at support@blizzard.com.
+
+--------------------------------------------------------------------------------
+- patch 1.08b 
+--------------------------------------------------------------------------------
+
+- Fixed a bug that caused the game to crash when a damaged morphing creep colony,
+- changed into a sunken colony.
+
+- Mac ladder maps are now correct.
+
+- Corrected URLs for KBK. www.kbk21.com.
+
+- Removed URL for replay FAQ.
+
+--------------------------------------------------------------------------------
+- patch 1.08
+--------------------------------------------------------------------------------
+- Adds support for a new template "Top vs Bottom". This template functions
+  like Melee, with the exception that players in each half are automatically
+  allied and share vision at game start, thus removing the "who am I allied
+  with" question (and reducing the amount of clicking done after the game
+  starts). The game creator can move players around between the two sides as
+  needed to assign teams properly. Note that Top vs Bottom only works for
+  games with two sides - if you want to play 2x2x2 games, you will still need
+  to use Melee.
+
+- Adds support for Game Recording. When a game is over, there will be a new
+  button "Save Replay" in the victory/defeat screen. If you save a replay, you
+  can watch it at a future date. Replays are saved to the "replay" folder inside
+  your Maps folder. Create a game and pick your replay from the "replay" folder.
+  A replay is always passworded. Up to 7 other people can your your replay game
+  to watch it with you; chat is from the people currently connected to the
+  replay game. Replay files can be transferred to other people automatically
+  (if someone joins your replay game, they get your replay transferred to them
+  via the automatic map download facility), or you can copy your replay files
+  (replays end in .REP) from your "replay" folder to a desired destination
+  manually. See www.blizzard.com\starcraft\replay for more information.
+  NOTE: game recording does not work for Team games (Team Melee, Team Free for
+  All, Team Capture the Flag).
+
+- Adds support for gateway selection. You can now specify which Battle.net
+  cluster to connect to. In normal cases, you will do nothing, and you will
+  be sent to the "closest" Battle.net cluster. If you wish to override the
+  automatic selection, you can pick a cluster manually.
+
+- Save Game clarification - the save game window now shows:
+    Saving Multiplayer Game
+    Save Game Name:  XXX
+  in order to avoid the "Saving Starcraft Virus 1.0 to Hard Disk" joke. 
+
+- If you are really clever, you can crush tanks by landing buildings on them.
+  This is the unexpected consequence to fixing a cheeze that allowed players
+  to have siege tanks underneath barracks.
+
+- Better proxy support
+- Clearer battle.net messages.
+- Updated "Connecting to fastest server" messages to be clearer.
+- Ladders maps updated.
+- Ladder cheating fix - Ladder map alteration fix (Japanese version too)
+- Fixed various language translation problems.
+- Fixed "gliding SCV" and "teleporting drone" bugs
+
+ADDITIONAL KBK SUPPORT
+Template Types
+- KBK (Beginner) 
+- KBK (Game Room)
+- KBK (Professional)
+- KBK (Single)
+- KBK (TEAM)
+- KBK (Zone)
+Account Types:
+- KBK Beginner
+- KBK Game Room
+- KBK Professional
+- KBK Single
+- KBK Team-6 
+- KVK Zone-6
+
+--------------------
+Balance Changes 1.08
+--------------------
+
+TERRAN:
+Valkyrie: 
+- Damage increase to 6 per missile.
+- Acceleration and velocity increased slightly.
+- Build time decreased.
+
+Science Facility:
+- Build time decreased.
+- Irradiate research cost increased to 200 minerals, 200 gas.
+- Yamato Cannon research cost decreased to 100 minerals, 100 gas.
+
+Missile Turret:
+- Decreased cost to 75 minerals.
+
+Factory:
+- Charon Missile Booster research cost decreased to 100 minerals, 100 gas.
+
+Dropship: 
+- Increased speed.
+
+Goliath:
+- Increased ground attack range.
+
+Battle Cruiser:
+- Build time decreased.
+- Supply cost decreased to 6.
+
+PROTOSS:
+Dragoon:
+- Build time increased.
+
+Scout:
+- Decreased cost to 275 minerals, 125 gas.
+
+Carrier:
+- Supply cost decreased to 6.
+
+Templar:
+- Psi Storm Damage reduced.
+
+Corsair:
+- Disruption Web spell duration decreased.
+
+Zealot:
+- Shields decreased to 60 and hit points increased to 100.
+
+ZERG:
+Queen:
+- Decreased build cost to 100 minerals, 100 gas.
+
+Ultralisk:
+- Supply cost decreased to 4.
+ 
+Queen's Nest:
+- Spawn Broodling cost decreased to 100 minerals, 100 gas.
+
+Hydralisk Den:
+- Lurker Aspect cost increased to 200 minerals, 200 gas.
+- Hydralisk speed upgrade cost increased to 150 minerals, 150 gas.
+
+Spawning Pool:
+- Increased build cost to 200 minerals
+
+Sunken Colony:
+- Building armor increased to 2.
+- Hit points decreased to 300.
+
+--------------------------------------------------------------------------------
+- patch 1.07
+--------------------------------------------------------------------------------
+- Adds support for Korean tournament (KBK).
+- Fixes lag meters on join game screen.
+- Changes default Battle.net font so that it is easier to distinguish 
+  certain characters while in chat.
+- Fixes German text for Brood War units which appeared as English on some systems
+  after upgrading to v1.06.
+
+--------------------------------------------------------------------------------
+- patch 1.06 - (Battle.net client patch)
+--------------------------------------------------------------------------------
+- Adds Battle.net support for Warcraft II: Battle.net Edition.
+- Adds command completion to Battle.net chat. It can be accessed by pressing 
+  the <tab> key.
+- Fixes some minor battle.net issues.
+- Displays cancel dialog in situations when server is busy.
+
+--------------------------------------------------------------------------------
+- patch 1.05
+--------------------------------------------------------------------------------
+
+- Reduced Academy cost to 150 minerals.
+
+- Reduced Science Facility cost to 100 minerals, 150 gas.
+
+- Reduced Spider Mine research cost to 100 minerals, 100 gas.
+
+- Reduced the cooldown for units on unload from a transport.
+
+- Added a limit so games can only be saved at most once every
+  two minutes during a multiplayer game.
+
+- Fixed a bug that caused save game compatibility problems with 1.03 save 
+  games loaded into 1.04 and Brood War.
+
+- The 'something for nothing' cheat no longer gives Brood
+  War upgrades in normal Starcraft games.
+
+- When using the 'exactly' modifier in trigger conditions, incomplete
+  units are no longer included in the comparision.
+
+- Hallucinated devourers no longer leave acid spores on targeted units.
+
+- Spider mines are now properly affected by disruption web.
+
+- Neutral medics no longer auto-heal units.
+
+- Added a wireframe for Infested Duran in a dropship.
+
+- The low memory version of the disruption web art is now correct.
+
+- Terran insane AI no longer locks the system.
+
+- Fixed the bug that allowed terran buildings to move after landing.
+
+- Fixed the bug that incorrectly allowed 'morph to lurker' commands
+  to be issued to units that weren't hydralisks.
+
+- Miscellaneous minor bug fixes.
+
+- (StarEdit) Eliminated dependence on updated comctrl32.dll
+
+- (StarEdit) Now displays language based on installed version of Starcraft
+  rather than operating system setting
+
+- (StarEdit) Fixed a bug in the Player Upgrades dialog that could cause settings
+  for one player to be inadvertently copied to another
+
+--------------------------------------------------------------------------------
+- patch 1.04
+--------------------------------------------------------------------------------
+- Custom AI has been strengthened, beware.
+
+- Invincible Drone bug has been fixed.
+
+- Starcraft compatibility with Brood War implemented.
+
+- You can select all burrowed units of the same type or cloaked units of the
+  same type by using the Ctrl+select method or by double clicking.
+
+- If you have multiple Carriers or Reavers selected you can build Interceptors
+  and Scarabs for all of them at the same time.
+
+- Cooldown times of units being dropped out of transports corrected.
+
+- Stim Pack causing Firebats to fire slowly corrected.
+
+- Zergling adrenal gland upgrade effects corrected.
+
+- Fixed a bug where the muzzle flash on a full fire bunker aiming south 
+  displayed incorrectly.
+
+- Air unit movement near the edge of the map corrected.
+
+- The Ladder directory has been updated with the Season 4 ladder maps.
+  Retired ladder maps have been moved to the OldLadder directory.
+
+============================================
+1.04 Changes to StarEdit (Map Editor)
+============================================
+
+- New save feature that identifies all 'enhanced' data in the scenario and
+  specifies which versions of Starcraft will be able to load the scenario.
+
+- Addition of the comparing conditional 'exactly' for use in such triggers
+  as: ACCUMULATE, BRING, COMMAND, COUNTDOWN TIMER, DEATHS, ELAPSED TIME, 
+  KILL, OPPONENTS, and SCORE.
+
+- Increased number of Switches to 256.
+
+- Increased number of usable locations to 254.
+
+- Added the ability to specify 'Random' in the SET SWITCH trigger action.
+
+- Added the ability to name switches.
+
+- Added the ability to set Fog-of-War for multiple players simultaneously
+  by holding down Control or Shift.
+
+- Added the ability to re-name any unit.
+
+- New triggers:
+	a) ORDER UNIT (Move to, Patrol to, Attack to)
+	b) The ability to specify a quantity for the following actions:
+           CREATE UNIT, CREATE UNIT W/PROPERITIES, 
+           MOVE UNIT, KILL UNITS AT LOCATION, REMOVE UNITS AT LOCATION.
+	c) PAUSE/UNPAUSE TIMER
+	d) MODIFY UNIT ENERGY
+	e) MODIFY HANGER COUNT
+	f) MODIFY UNIT HIT POINTS
+	g) GIVE UNITS TO PLAYER
+	h) MODIFY UNIT RESOURCES
+	I) MODIFY UNIT SHIELD POINTS
+	j) SET ALLIANCE STATUS
+	k) COMMENT TRIGGER
+	l) END IN DRAW
+	m) SET UNIT DEATHS
+
+- You can now select locations obscured by other locations.
+
+- Location operations are now undoable.
+
+- You can now explicitly sort Conditions.
+
+- You can remove all Map Revealers from a map (really!).
+
+- The Unit and Hero Settings dialog has been enhanced.
+
+A new StarEdit help file with info on these triggers and all the new
+features in StarEdit can be downloaded from our web site (http://www.blizzard.com).
+
+============================
+1.04 Balance Changes
+============================
+
+TERRAN:
+Wraith
+- Decreased cost to 150 minerals, 100 gas.
+- Increased cooldown rate of ground attack.
+- Increased air to air damage to 20.
+
+Dropship:
+- Increased speed slightly.
+- Although the patch.txt included with patch 1.04 states that dropship build time was increased, this is INCORRECT.
+
+Science Vessel:
+- Decreased cost to 100 minerals, 225 gas.
+- Increased acceleration.
+- Increased overall damage of Irradiate.
+- Increased sight radius.
+
+Battlecruiser:
+- Increased its starting armor to 3.
+- Increased Yamato Cannon damage to 260.
+
+Goliath:
+- Increased ground damage to 12.
+- Increased effectivness of weapon upgrade on ground to air weapon system.
+
+Nuke:
+- Nuclear Missiles build faster.
+
+ComSat:
+- Decreased energy cost to 50.
+
+Starport:
+- Decrease cost of Starport to 150 minerals, 100 gas.
+- Decreased add-on cost of Control Tower to 50 minerals, 50 gas.
+- Decreased build time.
+
+===============================
+PROTOSS:
+Archon:
+- Increased acceleration.
+
+Dragoon:
+- Decreased cost to 125 minerals, 50 gas.
+- Decreased build time.
+- Increased range upgrade (Singularity Charge) by 1.
+
+High Templar:
+- Decreased energy cost of Hallucination to 100.
+
+Scout:
+- Increased Air to Air damage to 28.
+- Increased shields to 100 and hit points to 150.
+- Increased cooldown rate of ground attack.
+
+Carrier:
+- Changed build cost to 350 minerals, and 250 gas.
+- Increased hit points of Carrier to 300.
+- Increased starting armor of Carrier to 4.
+- Increased Interceptor shields and hitpoints to 40.
+- Increased Interceptor damage to 6.
+
+Arbiter:
+- Decreased cost to 100 minerals, 350 gas.
+
+Shuttle:
+- Increased build time.
+
+Reaver:
+- Increased build time.
+
+Templar Archives
+- Increased cost to 150 minerals, 200 gas.
+
+Citadel of Adun
+- Decreased cost to 150 minerals, 100 gas.
+
+Stargate:
+- Decreased cost to 150 minerals, 150 gas.
+- Decreased build time.
+
+Robotics Facility:
+- Increased build time.
+
+Robotics Support Bay:
+- Increased cost to 150 minerals, 100 gas.
+
+Observatory:
+- Decreased cost to 50 minerals, 100 gas.
+
+Forge:
+- Decreased cost to 150 minerals.
+
+Photon Cannon:
+- Decreased build time.
+
+Fleet Beacon:
+- Decreased cost of "Increased Carrier capacity" upgrade to 100 minerals, 100 gas.
+- Decreased research time of "Increased Carrier capacity" upgrade.
+
+Shield Battery:
+- Increased starting energy to 100.
+- Increased effective range of 'Recharge Shields'.
+
+===============================
+ZERG:
+Overlord:
+- Increased speed bonus for "Pneumatized Carapace" upgrade.
+- Decreased research time of "Ventral Sacs" upgrade.
+
+Scourge:
+- Increase hit points to 25.
+
+Hydralisk
+- Increased build time.
+
+Mutalisk
+- Although the patch.txt included with patch 1.04 states that Mutalisk build time was increased, this in INCORRECT.
+
+Queen:
+- Increased range of Broodling by 1.
+- Increase energy cost of Parasite to 75
+- Decreased Parasite casting range to 12.
+
+Defiler:
+- Increased cost to 50 minerals, 150 gas.
+
+Hatchery:
+- Decreased the speed at which the Hatchery/Lair/Hive spawn new larva.
+- Decreased build cost to 300 minerals.
+- Increased build time.
+
+Sunken Colony:
+- Decreased cost of Sunken Colony upgrade to 50 minerals.
+- Decreased build time.
+- Increased attack rate of Sunken Colony.
+- Increased damage to 40.
+
+Spore Colony:
+- Decreased build time.
+- Changed damage type to normal.
+
+Greater Spire:
+- Increased build time.
+
+--------------------------------------------------------------------------------
+- patch 1.03
+--------------------------------------------------------------------------------
+- Very long games using the Terran Insane AI will no longer lock up.
+
+- Custom maps that use the "set next map" trigger will now work properly after
+  loading them from a saved game.
+
+- The length of time you have to leave a game before it counts on your record
+  on battle.net has been reduced from 5 minutes to 2 minutes.
+
+- New ladder maps have been added. The old ladder maps have been moved to 
+  the OldLadder directory and downgraded to "Blizzard Approved" status.
+  The (8)Green Valleys.scm map has been promoted to "Ladder" status.
+
+- Fixed bug where if Zerg burrowers burrowed just as they decloaked (when leaving
+  an Arbiter's field of influence) it would desync a network game.
+
+- The MOVE UNIT trigger action now behaves correctly with add-ons. Buildings
+  with existing add-ons will detach from the add-on if either the building
+  or the add-on moves. Add-ons under construction will be cancelled.
+
+- Buildings that are created with the CREATE UNIT trigger action or moved with
+  the MOVE UNIT trigger action will attempt to reattach to add-ons of the correct
+  type that are in the correct location.
+
+- Preplaced carriers owned by the Neutral player slot that have an initial
+  hangar count greater than 0 will no longer crash the game.
+
+- Executing a KILL UNIT trigger action immediately followed by a MOVE UNIT
+  trigger action will no longer result in a crash.
+
+- Doodads are no longer affected by the MOVE UNIT trigger action.
+
+- The mission countdown timer now has a maximum value of 99:99:99 (h:m:s)
+
+- Fixed bug that caused Elapsed Time to display incorrectly when finishing
+  a very short mission.
+
+--------------------------------------------------------------------------------
+- patch 1.02
+--------------------------------------------------------------------------------
+- Flying units no longer receive 'cover' from terrain features.
+
+- Fixed the bug when cancelling a guardian in high latency games that killed 
+  the mutalisk and gave multiple refunds.
+
+- Fixed the bug that could sometimes cause a map editor, hit point modified 
+  siege tank's hit points to be incorrect after transforming.
+
+- Time elapsed while the game is paused no longer counts toward total
+  elapsed game time.
+
+- Increased the cost of a Zerg Hatchery from 300 to 350 minerals.
+
+- Changed the damage type of the Photon Cannon weapon system from explosion
+  to normal.
+
+- Preplaced heroes for the AI will now auto acquire targets and defend themselves.
+
+- Fixed a bug that could potentially, in high latency games, over-charge zerg
+  players when morphing larva into units.
+
+- Modified the 'Free For All' game type so that the rules of diplomacy apply
+  to computer players. (Computer players are no longer allied in FFA.) Also,
+  made FFA available for single player custom games.
+
+- Fixed the crash that occurred when selecting a unit type, that would normally
+  have shields, configured to have 0 shields via the map editor.
+ 
+- Fixed the bug that bumped people back to the race select screen after they
+  had completed a single player campaign mission.
+
+- (Battle.net) Create game screen will now display ladder game speed as 'Fast' 
+  instead of 'Faster'.
+
+- (Battle.net) Profile draw code will now handle different sized destination
+  windows.
+
+- Fixed 'attach to incomplete addon' crash bug.
+
+- Added three new Computer AI scripts for use with the map editor (Protoss
+Insane, Terran Insane, Zerg Insane) to be used in custom campaign levels.
+
+- Fixed bug that played the incorrect 'complete' sound for addons.
+
+- Fixed bug that prevented rescued tanks and goliaths from acquiring targets
+correctly.
+
+- Fixed bug that caused Starcraft to allocate unnecessary amounts of memory
+while running minimized.
+
+- Fixed bug that could cause maps with a large number of pre-placed units to
+  crash at load time.
+
+- Fixed bug that, in rare cases, could cause game to crash when certain types of units died.
+
+- Fixed bug that caused access violation when maps with unplaceable units were loaded.
+
+- Fixed bug that caused access violation when any zerg air unit died while cloaked by an arbiter.
+
+- (StarEdit) Fixed bug that prevented changes to Norad II Hero unit weapon damage fields
+
+- (StarEdit) Mineral patches and geyser are now limited to 50,000.
+
+- (StarEdit) Added exception handler.
+
+- (StarEdit) Fixed bug that made it impossible to remove Map Revealers via a trigger.
+
+- (StarEdit) Fixed bug that could cause triggers to 'disappear' on systems
+using large fonts.
+
+- (StarEdit) Fixed bug that allows powerups to be placed in invalid locations on
+high terrain
+
+- (StarInst) Fixed minor over-calculation of disk space used by saved games
+for uninstall.
+
+- (StarInst) Moved file pre-cache requests to the install scripts.
+
+- (StarInst) Added support for multiple events per screen item without the
+use of sub-scripts.
+
+- (StarInst) Eliminated unnecessary screen refreshes.
+
+--------------------------------------------------------------------------------
+- patch 1.01
+--------------------------------------------------------------------------------
+- Fixed cheat that allowed one player in a multiplayer game to see the map.
+
+- Fixed bug that allowed players to receive extra resources when 
+canceling building construction multiple times by exploiting lag in a 
+multi-player game.
+
+- Fixed pathing problem related crash bug that was most commonly 
+exhibited in Terran 10.
+
+- Fixed C Runtime Library crash bug exhibited during saved games 
+when year was greater than 2098.
+
+- Fixed sprite allocation errors that prevent normal combat and 
+creation of units.
+
+- Fixed occasional hang when joining and leaving Battle.net.
+
+- Enemy Science Vessels no longer continually unmask after 
+irradiating units.
+
+- Missile turrets controlled by the AI properly acquire targets.
+
+- Fixed blank game names in Battle.net game list.
+
+- Game names with high ASCII characters now show up properly.
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
