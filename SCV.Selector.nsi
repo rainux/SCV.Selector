@@ -417,6 +417,7 @@ FunctionEnd
 Function NoCDPatch
   ${If} $NoCD = 1
     ${If} $Version S>= "Brood War v1.15.2"
+    ${AndIf} $Version S< "StarCraft v1.00"
       # 当 BroodWar.mpq 不存在时，优先使用用户已有的 Install.exe
       IfFileExists "$INSTDIR\BroodWar.mpq" +4 0
         IfFileExists "$INSTDIR\Install.exe" 0 +2
