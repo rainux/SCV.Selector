@@ -9,7 +9,7 @@
   !define PRODUCT_NAME "SCV Selector (Full Edition)"
   !define SCV_INI "SCV.ini"
 !endif
-!define RELEASE_DATE "2009.01.27"
+!define RELEASE_DATE "2009.04.27"
 !define PRODUCT_VERSION "Build ${RELEASE_DATE}"
 
 ; MUI 1.67 compatible ------
