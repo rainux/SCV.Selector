@@ -29,6 +29,7 @@ Page custom ShowVerSelect LeaveVerSelect
 ; Language files
 !insertmacro MUI_LANGUAGE "English"
 !insertmacro MUI_LANGUAGE "SimpChinese"
+!insertmacro MUI_LANGUAGE "TradChinese"
 
 LangString TEXT_IO_TITLE ${LANG_ENGLISH} "StarCraft Version Select"
 LangString TEXT_IO_SUBTITLE ${LANG_ENGLISH} "StarCraft Location: $INSTDIR"
@@ -37,7 +38,7 @@ LangString STARCRAFT_TIP ${LANG_ENGLISH} "\r\nStarCraft, back to the Age without
 LangString BROODWAR_TIP ${LANG_ENGLISH} "\r\nStarCraft: Brood War, do you remember morph Zergling to Mutalisk in 1.04, sea of Hydralisks from 3 Hatcheries in 1.07?"
 LangString EXPRESS_MODE_TIP ${LANG_ENGLISH} "\r\nChecked: Use StarCraft installation folder detected in Registry, and auto close when done. If there's no StarCraft installation information in Registry, then use current folder.\r\n\r\nUnchecked: Choose StarCraft installation folder yourself, default to the StarCraft installation folder detected in Registry."
 LangString NOCD_TIP ${LANG_ENGLISH} "\r\nChecked: For versions before 1.15.2, apply the simplest No-CD patch (modify storm.dll with only 1 byte data, provided by keakon from forum of YaoYuan.com). Use this No-CD patch will cause you cannot play on Battle.net (Of course you can still play in LAN with IPX or UDP).\r\nFor version 1.15.2 and later, since Blizzard provided official No-CD support, to play without CD just ensure either BroodWar.mpq or StarCraft.mpq exists in your StarCraft installation folder.\r\nBoth cases require you copy the file Install.exe from StarCraft CD to StarCraft installation folder, for versions before 1.15.2 the filename must be Install.exe, for version 1.15.2 and later, the filename must be BroodWar.mpq or StarCraft.mpq. So if either Install.exe or BroodWar.mpq exists in StarCraft installation folder, SCV Selector will change it's name to suit with current selected version, else will install a minimal BroodWar.mpq without any content, this will allow StarCraft runs without CD, but also without background music && official single player mission.\r\n\r\nUnchecked: Do not apply No-CD patch, for versions before 1.15.2 you need other No-CD tool or StarCraft CD (or CD image with virtual CD tool) to play."
-LangString REGFIX_TIP ${LANG_ENGLISH} "\r\nDefault (Grayed): Modify Registry to change StarCraft installation folder to the folder selected with SCV Selector, this ensure StarCraft read && write game data such as player ID, maps from correct folder. If NoCD checked, for No-CD patch works with versions before 1.15.2, also change the StarCraft CD location to StarCraft installation folder.\r\n\r\nChecked: In addition to the StarCraft installation folder && CD location fixing in Default state, also reset some other settings of StarCraft to default value. This option useful when you copied StarCraft installation folder from another computer, or just want to fix the confused StarCraft settings in Registry.\r\n\r\nUnchecked (Not Recommended): Do not modify any settings in Registry. StarCraft may have strange behavior since installation folder in Registry is different from the actual installation folder, even cause No-CD patch don't works for versions before 1.15.2."
+LangString REGFIX_TIP ${LANG_ENGLISH} "\r\nDefault (Grayed): Modify Registry to change StarCraft installation folder to the folder selected with SCV Selector, this ensure StarCraft read && write game data such as player ID, maps from correct folder. If NoCD checked, for No-CD patch works with versions before 1.15.2, also change the StarCraft CD location to StarCraft installation folder.\r\n\r\nChecked: In addition to the StarCraft installation folder && CD location fixing in Default state, also reset some other settings of StarCraft to default value. This option useful when you copied StarCraft installation folder from another computer, or just want to fix the confused StarCraft settings in Registry.\r\n\r\nUnchecked (Not Suggested): Do not modify any settings in Registry. StarCraft may have strange behavior since installation folder in Registry is different from the actual installation folder, even cause No-CD patch don't works for versions before 1.15.2."
 LangString RAINUX_ORG_TIP ${LANG_ENGLISH} "\r\nVisit SCV Selector release page."
 
 LangString MUI_TEXT_DIRECTORY_TITLE ${LANG_ENGLISH} "Choose StarCraft Location"
@@ -61,13 +62,13 @@ LangString STARCRAFT_TIP ${LANG_SimpChinese} "\r\nStarCraft，回到没有 Medic 没有
 LangString BROODWAR_TIP ${LANG_SimpChinese} "\r\nStarCraft: Brood War，还记得 1.04 的小狗变飞龙，1.07 的三基地刺蛇海么？"
 LangString EXPRESS_MODE_TIP ${LANG_SimpChinese} "\r\n选中: 直接使用从注册表里探测到的 StarCraft 安装文件夹，完成后自动关闭。若注册表里没有 StarCraft 安装信息，则使用当前文件夹。\r\n\r\n不选: 自己选择 StarCraft 安装文件夹，默认是从注册表里探测到的 StarCraft 安装文件夹。"
 LangString NOCD_TIP ${LANG_SimpChinese} "\r\n选中: 对于 1.15.2 以前的版本，应用最简单的免 CD 补丁（YaoYuan.com 论坛网友 keakon 提供的只修改 storm.dll 一个字节的方式）。使用这种免 CD 补丁将无法进入官方 Battle.net 进行网络对战（当然，IPX 或 UDP 等我们最常用的局域网对战模式是不会受到影响的）。\r\n对于 1.15.2 及以后的版本，由于 Blizzard 已经提供官方的免 CD 支持，只要保证 StarCraft 安装文件夹下有 BroodWar.mpq 或者 StarCraft.mpq 这两个文件其中之一即可免 CD。\r\n这两种情况都需要从 StarCraft 安装光盘上复制 Install.exe 到 StarCraft 安装文件夹，对于 1.15.2 之前的版本文件名必须是 Install.exe ，对于 1.15.2 及以后的版本文件名必须是 BroodWar.mpq 或 StarCraft.mpq。因此如果 StarCraft 安装文件夹下已经有 Install.exe 或 BroodWar.mpq，SCV Selector 会将其改名以适合当前所选择的版本，如果两个文件都不存在，则会安装一个无任何内容的最精简版本 BroodWar.mpq，这样做能保证 StarCraft 免 CD 运行，但游戏将没有背景音乐并且无法进入单人模式的剧情战役。\r\n\r\n不选: 不应用免 CD 补丁，需要其它免 CD 工具或 StarCraft 原版光盘（或光盘镜像和虚拟光驱工具）才能进行游戏。"
-LangString REGFIX_TIP ${LANG_SimpChinese} "\r\n默认（灰色）: 修改注册表里的 StarCraft 安装文件夹为 SCV Selector 中选择的文件夹，确保 StarCraft 在正确的文件夹读写玩家 ID、地图等游戏数据。如果选中 NoCD，对于 1.15.2 以前的版本，为了免 CD 补丁正常工作，也会把 StarCraft 光盘位置修改为 StarCraft 安装文件夹。\r\n\r\n选中: 除了默认状态时的 StarCraft 安装文件夹、光盘位置修复之外，还会将 StarCraft 的其它一些设置重置为默认值。这个选项主要用于从其它计算机复制 StarCraft 安装文件夹后免安装运行，以及修复混乱的 StarCraft 注册表设置。\r\n\r\n不选（不推荐）: 不修改注册表中的任何设置。有可能因为注册表中的 StarCraft 安装文件夹和实际的安装文件夹不一致而出现异常情况，甚至导致免 CD 补丁对 1.15.2 以前的版本无效。"
+LangString REGFIX_TIP ${LANG_SimpChinese} "\r\n默认（灰色）: 修改注册表里的 StarCraft 安装文件夹为 SCV Selector 中选择的文件夹，确保 StarCraft 在正确的文件夹读写玩家 ID、地图等游戏数据。如果选中 NoCD，对于 1.15.2 以前的版本，为了免 CD 补丁正常工作，也会把 StarCraft 光盘位置修改为 StarCraft 安装文件夹。\r\n\r\n选中: 除了默认状态时的 StarCraft 安装文件夹、光盘位置修复之外，还会将 StarCraft 的其它一些设置重置为默认值。这个选项主要用于从其它计算机复制 StarCraft 安装文件夹后免安装运行，以及修复混乱的 StarCraft 注册表设置。\r\n\r\n不选（不建议）: 不修改注册表中的任何设置。有可能因为注册表中的 StarCraft 安装文件夹和实际的安装文件夹不一致而出现异常情况，甚至导致免 CD 补丁对 1.15.2 以前的版本无效。"
 LangString RAINUX_ORG_TIP ${LANG_SimpChinese} "\r\n访问 SCV Selector 发布页面。"
 
 LangString MUI_TEXT_DIRECTORY_TITLE ${LANG_SimpChinese} "选择 StarCraft 位置"
 LangString MUI_TEXT_DIRECTORY_SUBTITLE ${LANG_SimpChinese} "选择安装 StarCraft 的文件夹。"
 LangString ^DirText ${LANG_SimpChinese} "SCV Selector 探测到 StarCraft 安装在以下文件夹。如果想使用安装在其它文件夹的 StarCraft，单击 [浏览(B)] 并选择它。"
-LangString ^DirBrowseText ${LANG_SimpChinese} "选择想要使用的 StarCraft 所在的文件夹:"
+LangString ^DirBrowseText ${LANG_SimpChinese} "选择想要使用的 StarCraft 所在文件夹:"
 LangString ^DirSubText ${LANG_SimpChinese} "StarCraft 安装文件夹"
 LangString ^InstallBtn ${LANG_SimpChinese} "&Go Go Go!"
 
@@ -77,6 +78,30 @@ LangString MUI_TEXT_FINISH_TITLE ${LANG_SimpChinese} "完成"
 LangString MUI_TEXT_FINISH_SUBTITLE ${LANG_SimpChinese} "SCV Selector 成功完成操作。"
 LangString MUI_TEXT_ABORT_TITLE ${LANG_SimpChinese} "中止"
 LangString MUI_TEXT_ABORT_SUBTITLE ${LANG_SimpChinese} "SCV Selector 没有成功完成操作。"
+
+LangString TEXT_IO_TITLE ${LANG_TradChinese} "StarCraft Version Select"
+LangString TEXT_IO_SUBTITLE ${LANG_TradChinese} "StarCraft 竚: $INSTDIR"
+
+LangString STARCRAFT_TIP ${LANG_TradChinese} "\r\nStarCraft⊿Τ Medic ⊿Τ Lurker ⊿Τ Dark Templar "
+LangString BROODWAR_TIP ${LANG_TradChinese} "\r\nStarCraft: Brood War临癘眔 1.04 跑纒1.07 膀矰盾"
+LangString EXPRESS_MODE_TIP ${LANG_TradChinese} "\r\nつ匡: 钡ㄏノ眖祅魁郎柑盎代 StarCraft 杆戈ЖЧΘ笆闽超璝祅魁郎柑⊿Τ StarCraft 杆戈癟玥ㄏノヘ玡戈Ж\r\n\r\nぃ匡: 匡拒 StarCraft 杆戈Ж箇砞琌眖祅魁郎柑盎代 StarCraft 杆戈Ж"
+LangString NOCD_TIP ${LANG_TradChinese} "\r\nつ匡: 癸 1.15.2 玡セ莱ノ程虏虫 CD 干YaoYuan.com 阶韭呼ね keakon 矗ㄑэ storm.dll じ舱よΑㄏノ硂贺 CD 干盢礚猭秈﹛よ Battle.net 秈︽呼隔癸驹讽礛IPX ┪ UDP 单и程盽ノ跋呼癸驹家Α琌ぃ穦紇臫\r\n癸 1.15.2 のセパ Blizzard 竒矗ㄑ﹛よ CD や穿璶絋粄 StarCraft 杆戈ЖΤ BroodWar.mpq ┪ StarCraft.mpq 硂ㄢ郎ㄤいぇ CD\r\n硂ㄢ贺薄猵常惠璶眖 StarCraft 杆盒狡籹 Install.exe  StarCraft 杆戈Ж癸 1.15.2 ぇ玡セ郎ゲ斗琌 Install.exe 癸 1.15.2 のセ郎ゲ斗琌 BroodWar.mpq ┪ StarCraft.mpq狦 StarCraft 杆戈Ж竒Τ Install.exe ┪ BroodWar.mpqSCV Selector 穦盢ㄤэ才ヘ玡┮匡拒セ狦ㄢ郎常ぃ玥穦杆礚ヴず甧程弘虏セ BroodWar.mpq硂妓暗玂靡 StarCraft  CD 磅︽笴栏盢⊿Τ璉春贾礚猭秈虫家Α粿薄驹\r\n\r\nぃ匡: ぃㄏノ CD 干惠璶ㄤウ CD ㄣ┪ StarCraft 盒┪盒描钩㎝店览盒诀ㄣ秈︽笴栏"
+LangString REGFIX_TIP ${LANG_TradChinese} "\r\n箇砞η︹: э祅魁郎柑 StarCraft 杆戈Ж SCV Selector い匡拒戈Ж絋玂 StarCraft タ絋戈Ж弄糶產 ID瓜单笴栏戈狦つ匡 NoCD癸 1.15.2 玡セㄏ CD 干タ盽笲盢穦р StarCraft 盒竚э StarCraft 杆戈Ж\r\n\r\nつ匡: 埃箇砞篈 StarCraft 杆戈Ж盒竚確ぇ临穦盢 StarCraft ㄤウㄇ砞﹚竚箇砞硂匡兜璶ノ眖ㄤウ筿福狡籹 StarCraft 杆戈Ж杆磅︽の確岿粇 StarCraft 祅魁郎砞﹚\r\n\r\nぃ匡ぃ某: ぃэ祅魁郎いヴ砞﹚Τ祅魁郎い StarCraft 杆戈Ж㎝龟悔杆戈Жぃ璓τ瞷钵盽薄猵旧璓 CD 干癸 1.15.2 玡セ礚"
+LangString RAINUX_ORG_TIP ${LANG_TradChinese} "\r\n硑砐 SCV Selector 祇"
+
+LangString MUI_TEXT_DIRECTORY_TITLE ${LANG_TradChinese} "匡拒 StarCraft 竚"
+LangString MUI_TEXT_DIRECTORY_SUBTITLE ${LANG_TradChinese} "匡拒杆 StarCraft 戈Ж"
+LangString ^DirText ${LANG_TradChinese} "SCV Selector 盎代 StarCraft 杆戈Ж狦稱ㄏノ杆ㄤウ戈Ж StarCraft [聅凝(B)] 匡拒ウ"
+LangString ^DirBrowseText ${LANG_TradChinese} "匡拒稱璶ㄏノ StarCraft ┮戈Ж:"
+LangString ^DirSubText ${LANG_TradChinese} "StarCraft 杆戈Ж"
+LangString ^InstallBtn ${LANG_TradChinese} "&Go Go Go!"
+
+LangString MUI_TEXT_INSTALLING_TITLE ${LANG_TradChinese} "タ"
+LangString MUI_TEXT_INSTALLING_SUBTITLE ${LANG_TradChinese} "SCV Selector タ盢 StarCraft 锣传 $Version叫祔獼..."
+LangString MUI_TEXT_FINISH_TITLE ${LANG_TradChinese} "ЧΘ"
+LangString MUI_TEXT_FINISH_SUBTITLE ${LANG_TradChinese} "SCV Selector 磅︽Θ"
+LangString MUI_TEXT_ABORT_TITLE ${LANG_TradChinese} "いゎ"
+LangString MUI_TEXT_ABORT_SUBTITLE ${LANG_TradChinese} "SCV Selector 磅︽ア毖"
 
 ; MUI end ------
 
@@ -118,6 +143,14 @@ BrandingText "${PRODUCT_NAME} ${PRODUCT_VERSION}"
   VIAddVersionKey /LANG=${LANG_SimpChinese} "FileVersion" "${PRODUCT_VERSION}"
   VIAddVersionKey /LANG=${LANG_SimpChinese} "InternalName" "SCV.Selector"
   VIAddVersionKey /LANG=${LANG_SimpChinese} "OriginalFilename" ${SCV_SELECTOR}
+
+  VIAddVersionKey /LANG=${LANG_TradChinese} "ProductName" "SCV Selector"
+  VIAddVersionKey /LANG=${LANG_TradChinese} "CompanyName" "Rainux"
+  VIAddVersionKey /LANG=${LANG_TradChinese} "LegalCopyright" "(C) Rainux"
+  VIAddVersionKey /LANG=${LANG_TradChinese} "FileDescription" "SCV Selector е硉盢 StarCraft ち传 1.00  1.16.1 ぇ丁ヴ種セ"
+  VIAddVersionKey /LANG=${LANG_TradChinese} "FileVersion" "${PRODUCT_VERSION}"
+  VIAddVersionKey /LANG=${LANG_TradChinese} "InternalName" "SCV.Selector"
+  VIAddVersionKey /LANG=${LANG_TradChinese} "OriginalFilename" ${SCV_SELECTOR}
 
 ;--------------------------------
 ;Reserve Files
